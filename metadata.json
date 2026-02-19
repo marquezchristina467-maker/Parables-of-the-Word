@@ -1,1 +1,5 @@
-
+{
+  "name": "Parables of the Word",
+  "description": "An interactive chronological explorer of the parables of Jesus, providing spiritual interpretations, historical clarifications, and modern-day examples to help users better understand the Lord's teachings.",
+  "requestFramePermissions": []
+}
