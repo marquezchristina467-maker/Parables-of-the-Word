@@ -25,14 +25,16 @@
       }
       .parchment {
         background: linear-gradient(to bottom right, #ffffff, #f7f2ea);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
       }
-      /* Custom scrollbar for a cleaner look */
+      .red-letter {
+        color: #b91c1c; /* deep red for words of Jesus */
+      }
       ::-webkit-scrollbar {
         width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #f1f1f1;
+        background: #f3f4f6;
       }
       ::-webkit-scrollbar-thumb {
         background: #d1d5db;
@@ -43,16 +45,251 @@
       }
     </style>
   </head>
-  <body class="min-h-screen flex items-center justify-center">
-    <div class="parchment max-w-3xl mx-auto p-8 rounded-xl">
-      <h1 class="font-serif text-4xl font-bold mb-4 text-center">
-        Parables of the Word
-      </h1>
-      <p class="text-gray-700 text-lg text-center">
-        A place to explore the parables of Scripture and how they speak into our lives today.
-      </p>
-    </div>
+  <body class="min-h-screen flex items-stretch">
+    <!-- Left column: list of the 55 parables -->
+    <aside class="w-full md:w-1/3 lg:w-1/4 bg-slate-900 text-slate-100 p-4 md:p-6 flex flex-col gap-4">
+      <header class="border-b border-slate-700 pb-3 mb-2">
+        <h1 class="font-serif text-2xl font-bold">Parables of the Word</h1>
+        <p class="text-sm text-slate-300 mt-1">
+          A chronological journey through 55 parables and parabolic teachings of Jesus.
+        </p>
+        <p class="text-xs text-slate-400 mt-1">1 of 55 · Gospel overview</p>
+      </header>
+
+      <div class="text-xs uppercase tracking-wide text-slate-400 mb-1">Parables (chronological)</div>
+
+      <nav class="flex-1 overflow-y-auto space-y-1 text-sm">
+        <!-- 1–55 list -->
+        <button class="w-full text-left px-3 py-2 rounded-lg bg-slate-800 border border-slate-700">
+          <div class="text-slate-100 font-semibold">1. Salt of the Earth &amp; Light of the World</div>
+          <div class="text-slate-400 text-xs">Matthew 5:13–16</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">2. The Speck and the Plank</div>
+          <div class="text-slate-400 text-xs">Matthew 7:3–5</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">3. The Wise and Foolish Builders</div>
+          <div class="text-slate-400 text-xs">Matthew 7:24–27</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">4. The Physician for the Sick</div>
+          <div class="text-slate-400 text-xs">Matthew 9:12</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">5. New Cloth on an Old Garment</div>
+          <div class="text-slate-400 text-xs">Matthew 9:16</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">6. New Wine in Old Wineskins</div>
+          <div class="text-slate-400 text-xs">Matthew 9:17</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">7. Children in the Marketplace</div>
+          <div class="text-slate-400 text-xs">Matthew 11:16–19</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">8. The Sower</div>
+          <div class="text-slate-400 text-xs">Matthew 13:3–9</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">9. Lamp on a Stand</div>
+          <div class="text-slate-400 text-xs">Mark 4:21–25</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">10. The Growing Seed</div>
+          <div class="text-slate-400 text-xs">Mark 4:26–29</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">11. The Mustard Seed</div>
+          <div class="text-slate-400 text-xs">Matthew 13:31–32</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">12. The Yeast / Leaven</div>
+          <div class="text-slate-400 text-xs">Matthew 13:33</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">13. The Weeds and the Wheat</div>
+          <div class="text-slate-400 text-xs">Matthew 13:24–30</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">14. The Hidden Treasure</div>
+          <div class="text-slate-400 text-xs">Matthew 13:44</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">15. The Pearl of Great Price</div>
+          <div class="text-slate-400 text-xs">Matthew 13:45–46</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">16. The Net</div>
+          <div class="text-slate-400 text-xs">Matthew 13:47–50</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">17. The Scribe as Householder</div>
+          <div class="text-slate-400 text-xs">Matthew 13:52</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">18. The Two Debtors</div>
+          <div class="text-slate-400 text-xs">Luke 7:41–43</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">19. The Strong Man</div>
+          <div class="text-slate-400 text-xs">Matthew 12:29</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">20. Return of the Unclean Spirit</div>
+          <div class="text-slate-400 text-xs">Matthew 12:43–45</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">21. The Unforgiving Servant</div>
+          <div class="text-slate-400 text-xs">Matthew 18:23–35</div>
+        </button>
+        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
+          <div class="text-slate-100">22. The Good Samaritan</div>
+          <div class="text-slate-400 text-xs">Luke 10:25–37</div>
+        </button>
+        <!-- ... Continue the pattern for 23–55 as you have them listed ... -->
+      </nav>
+    </aside>
+
+    <!-- Right column: detail view for Parable #1 -->
+    <main class="flex-1 p-4 md:p-8 flex justify-center overflow-y-auto">
+      <div class="parchment w-full max-w-4xl mx-auto p-6 md:p-8 rounded-xl">
+        <!-- Title and reference -->
+        <header class="border-b border-amber-200 pb-4 mb-6">
+          <h2 class="font-serif text-3xl md:text-4xl font-bold mb-2 text-center text-amber-900">
+            Salt of the Earth &amp; Light of the World
+          </h2>
+          <p class="text-center text-sm md:text-base text-amber-700 font-medium">
+            Matthew 5:13–16 · First parable in the sequence
+          </p>
+        </header>
+
+        <!-- Scripture section -->
+        <section class="mb-6">
+          <h3 class="font-serif text-xl font-semibold mb-2 flex items-center gap-2 text-amber-900">
+            <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
+            Holy Scripture (ESV-style)
+          </h3>
+          <p class="text-sm text-amber-700 mb-1">Matthew 5:13–16</p>
+          <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-sm leading-relaxed red-letter">
+            <p class="mb-2">
+              "You are the salt of the earth, but if salt has lost its taste, how shall its saltiness be restored? It is
+              no longer good for anything except to be thrown out and trampled under people's feet.
+            </p>
+            <p class="mb-2">
+              You are the light of the world. A city set on a hill cannot be hidden. Nor do people light a lamp and put
+              it under a basket, but on a stand, and it gives light to all in the house.
+            </p>
+            <p>
+              In the same way, let your light shine before others, so that they may see your good works and give glory
+              to your Father who is in heaven."
+            </p>
+          </div>
+        </section>
+
+        <!-- Divine interpretation -->
+        <section class="mb-6">
+          <h3 class="font-serif text-xl font-semibold mb-2 text-amber-900">
+            Divine Interpretation
+          </h3>
+          <p class="text-sm md:text-base text-slate-800 leading-relaxed">
+            This teaching emphasizes the essential identity and purpose of a believer in the world. Being the
+            <span class="font-semibold">salt of the earth</span> suggests that followers of Christ are to act as a
+            preserving influence against moral decay while enhancing the goodness within society. Being the
+            <span class="font-semibold">light of the world</span> implies that believers must live out their faith
+            visibly, providing guidance, hope, and truth in a world darkened by sin.
+          </p>
+          <p class="text-sm md:text-base text-slate-800 leading-relaxed mt-3">
+            The primary theological lesson is that faith is not a private matter but a public calling, intended to draw
+            others to God through observable good works and a distinct, Christ-shaped character.
+          </p>
+        </section>
+
+        <!-- Historical and cultural context -->
+        <section class="mb-6">
+          <h3 class="font-serif text-xl font-semibold mb-2 text-amber-900">
+            Historical &amp; Cultural Context
+          </h3>
+          <p class="text-sm md:text-base text-slate-800 leading-relaxed">
+            In the ancient Near East, salt was indispensable for preserving food in a time without refrigeration and was
+            often used in sacrificial rituals. Salt harvested from the Dead Sea could sometimes be impure; if the sodium
+            chloride leached out, the remaining minerals were useless, illustrating the danger of a believer losing
+            their spiritual distinctiveness.
+          </p>
+          <p class="text-sm md:text-base text-slate-800 leading-relaxed mt-3">
+            The lamp mentioned was typically a small clay vessel fueled by olive oil. Placing it under a measuring
+            basket would not only hide the light but eventually extinguish the flame due to lack of oxygen—emphasizing
+            that hiding one’s faith is self-defeating and contrary to its purpose.
+          </p>
+        </section>
+
+        <!-- Modern application -->
+        <section class="mb-6">
+          <h3 class="font-serif text-xl font-semibold mb-2 flex items-center gap-2 text-amber-900">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-100 text-amber-700 text-lg">💡</span>
+            Modern Application
+          </h3>
+          <p class="text-sm md:text-base text-slate-800 leading-relaxed">
+            Consider a corporate professional working in a cutthroat environment where unethical shortcuts and gossip
+            are common. By maintaining strict honesty, refusing to participate in office politics, and treating every
+            colleague with genuine respect regardless of their rank, they act as <span class="font-semibold">salt</span>
+            —preserving the integrity of their workplace.
+          </p>
+          <p class="text-sm md:text-base text-slate-800 leading-relaxed mt-3">
+            When they choose to mentor a struggling junior employee or spend weekends volunteering at a community
+            center—and they openly attribute their motivation to their faith when asked—they are acting as
+            <span class="font-semibold">light</span>, making the values of the Kingdom visible to those around them.
+          </p>
+        </section>
+
+        <!-- Related teachings -->
+        <section class="mb-6">
+          <h3 class="font-serif text-xl font-semibold mb-2 text-amber-900">
+            Related Teachings
+          </h3>
+          <p class="text-sm text-slate-700 mb-2">
+            Explore similar themes across the Gospels:
+          </p>
+          <ul class="list-disc list-inside text-sm text-slate-800 space-y-1">
+            <li>Matthew 7:3–5 – The Speck and the Plank (danger of hypocrisy and judgmentalism)</li>
+            <li>Matthew 7:24–27 – Wise and Foolish Builders (building on the solid foundation of God’s Word)</li>
+            <li>Matthew 9:12 – The Physician (Jesus’ mission to the spiritually sick)</li>
+            <li>Matthew 9:16–17 – New Cloth &amp; New Wine (the new covenant versus old legalism)</li>
+          </ul>
+        </section>
+
+        <!-- Spiritual dialogue / AI placeholder -->
+        <section>
+          <h3 class="font-serif text-xl font-semibold mb-2 text-amber-900">
+            Spiritual Dialogue
+          </h3>
+          <p class="text-sm text-slate-700 mb-3">
+            Ask a question for deeper clarity on this parable, or reflect on how it speaks into your life.
+          </p>
+          <blockquote class="border-l-4 border-amber-400 pl-3 text-sm italic text-slate-700 mb-3">
+            "Open thou mine eyes, that I may behold wondrous things out of thy law." (Psalm 119:18)
+          </blockquote>
+          <div class="bg-white/80 border border-amber-100 rounded-lg p-3 flex flex-col gap-2">
+            <textarea
+              class="w-full border border-amber-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400"
+              rows="3"
+              placeholder="Write your question or reflection here..."
+            ></textarea>
+            <button
+              class="self-end inline-flex items-center px-4 py-1.5 rounded-md bg-amber-700 text-white text-sm font-medium hover:bg-amber-800 disabled:opacity-50"
+              disabled
+            >
+              Ask the Scholar (coming soon)
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
 
 
+
+
+Editing Parables-of-the-W
