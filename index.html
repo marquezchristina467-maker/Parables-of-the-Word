@@ -99,10 +99,13 @@
         </button>
 
         <!-- The rest are listed but not yet wired -->
-        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
-          <div class="text-slate-100">5. New Cloth on an Old Garment</div>
-          <div class="text-slate-400 text-xs">Matthew 9:16</div>
-        </button>
+       <button
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
+  data-parable="5"
+>
+  <div class="text-slate-100">5. New Cloth on an Old Garment</div>
+  <div class="text-slate-400 text-xs">Matthew 9:16</div>
+</button>
         <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
           <div class="text-slate-100">6. New Wine in Old Wineskins</div>
           <div class="text-slate-400 text-xs">Matthew 9:17</div>
@@ -630,7 +633,99 @@
           </div>
         </section>
         `,
+      5:
+         5: `
+        <header class="border-b border-amber-200 pb-4 mb-6">
+          <h2 class="font-serif text-3xl md:text-4xl font-bold mb-2 text-center text-amber-900">
+            New Cloth on an Old Garment
+          </h2>
+          <p class="text-center text-sm md:text-base text-amber-700 font-medium">
+            Matthew 9:16 · The incompatibility of the new covenant with old legalism
+          </p>
+        </header>
+
+        <section class="mb-6">
+          <h3 class="font-serif text-xl font-semibold mb-2 flex items-center gap-2 text-amber-900">
+            <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
+            Holy Scripture (ESV-style)
+          </h3>
+          <p class="text-sm text-amber-700 mb-1">Matthew 9:16</p>
+          <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-sm leading-relaxed red-letter">
+            <p>
+              "No one puts a piece of unshrunk cloth on an old garment, for the patch tears away from the garment, and
+              a worse tear is made."
+            </p>
+          </div>
+        </section>
+
+        <section class="mb-6">
+          <h3 class="font-serif text-xl font-semibold mb-2 text-amber-900">Divine Interpretation</h3>
+          <p class="text-sm md:text-base text-slate-800 leading-relaxed">
+            This parable teaches that the new life and covenant Jesus brings cannot simply be stitched onto old systems
+            of religious legalism. The new cloth represents the fresh, living reality of grace in Christ; the old
+            garment represents worn‑out structures of self‑righteousness and rule‑keeping.
+          </p>
+          <p class="text-sm md:text-base text-slate-800 leading-relaxed mt-3">
+            Theologically, it warns that trying to mix the Gospel with an unchanged, law‑based heart will only create
+            greater damage. Christ does not come to patch up our old ways but to make us new from the inside out.
+          </p>
+        </section>
+
+        <section class="mb-6">
+          <h3 class="font-serif text-xl font-semibold mb-2 text-amber-900">Historical &amp; Cultural Context</h3>
+          <p class="text-sm md:text-base text-slate-800 leading-relaxed">
+            In the first century, clothing was precious and often repaired many times. Unshrunk cloth sewn onto an old
+            garment would shrink when washed, pulling at the weaker, worn fabric and making the tear worse. Jesus uses
+            a simple household reality to communicate a profound spiritual truth.
+          </p>
+          <p class="text-sm md:text-base text-slate-800 leading-relaxed mt-3">
+            His words were spoken in the context of debates about fasting and religious practices, confronting those who
+            wanted to squeeze His new message of grace into their old patterns of devotion.
+          </p>
+        </section>
+
+        <section class="mb-6">
+          <h3 class="font-serif text-xl font-semibold mb-2 flex items-center gap-2 text-amber-900">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-100 text-amber-700 text-lg">💡</span>
+            Modern Application
+          </h3>
+          <p class="text-sm md:text-base text-slate-800 leading-relaxed">
+            Imagine someone who comes to faith in Christ but refuses to let go of an image‑based, performance‑driven
+            spirituality. They still see church attendance, volunteering, and outward behavior as a way to “earn” God’s
+            approval, even though they now confess grace.
+          </p>
+          <p class="text-sm md:text-base text-slate-800 leading-relaxed mt-3">
+            Instead of allowing Jesus to transform their identity at the heart level, they try to sew a “Jesus patch”
+            onto an old garment of striving. Over time, the tension between grace and legalism tears at their peace and
+            joy. This parable invites them to receive a whole new garment of grace, not just a religious patch.
+          </p>
+        </section>
+
+        <section class="mb-10">
+          <h3 class="font-serif text-xl font-semibold mb-2 text-amber-900">Spiritual Dialogue</h3>
+          <p class="text-sm text-slate-700 mb-3">
+            Ask the Lord to show you where you are still trying to “patch” Him onto old ways of thinking instead of
+            letting Him clothe you in something completely new.
+          </p>
+          <div class="bg-white/80 border border-amber-100 rounded-lg p-3 flex flex-col gap-2">
+            <textarea
+              class="w-full border border-amber-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400"
+              rows="3"
+              placeholder="Lord, where am I trying to add You on top of my old life instead of surrendering it?"
+            ></textarea>
+            <button
+              class="self-end inline-flex items-center px-4 py-1.5 rounded-md bg-amber-700 text-white text-sm font-medium hover:bg-amber-800 disabled:opacity-50"
+              disabled
+            >
+              Ask the Scholar (coming soon)
+            </button>
+          </div>
+        </section>
+        `,
       };
+
+        
+      
 
       const contentDiv = document.getElementById("parable-content");
       const items = document.querySelectorAll(".parable-item");
