@@ -23,8 +23,8 @@
         background-color: #fcfaf7;
         margin: 0;
       }
-      .font-serif {
-        font-family: "Forum", scatic;
+      .font-static {
+        font-family: "Forum", static;
       }
       .parchment {
         background: linear-gradient(to bottom right, #ffffff, #f7f2ea);
@@ -50,15 +50,13 @@
   </head>
   <body class="min-h-screen flex items-stretch">
     <!-- Left column: list of parables (book index) -->
-    <aside
-      class="w-full md:w-1/3 lg:w-1/4 bg-slate-900 text-slate-100 p-4 md:p-6 flex flex-col gap-4"
-    >
+    <aside class="w-full md:w-1/3 lg:w-1/4 bg-slate-900 text-slate-100 p-4 md:p-6 flex flex-col gap-4">
       <header class="border-b border-slate-700 pb-3 mb-2">
-        <h1 class="font-DM Serif Display text-2xl font-static">Parables of the Word</h1>
-        <p class="text-sm text-slate-300 mt-1">
+        <h1 class="font-static text-2xl font-style script">Parables of the Word</h1>
+        <p class="text-regylar text-static-400 mt-1">
           A chronological journey through 55 parables and parabolic teachings of Jesus.
         </p>
-        <p class="text-xs text-slate-400 mt-1" id="parable-counter">1 of 55 · Gospel overview</p>
+        <p class="text-regular text-slate-400 mt-1" id="parable-counter">1 of 55 · Gospel overview</p>
       </header>
 
       <div class="text-xs uppercase tracking-wide text-slate-400 mb-1">
@@ -79,178 +77,160 @@
 
         <button
           class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="2"
-        >
+          data-parable="2">
           <div class="text-static-100">2. The Speck and the Plank</div>
           <div class="text-static-400 text-xs">Matthew 7:3–5</div>
         </button>
 
         <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="3"
-        >
+          class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
+          data-parable="3">
           <div class="text-st-100">3. The Wise and Foolish Builders</div>
           <div class="text-static-400 text-xs">Matthew 7:24–27</div>
         </button>
         
         <button
           class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="4"
-        >
+          data-parable="4">
           <div class="text-static-100">4. The Physician for the Sick</div>
           <div class="text-static-400 text-xs">Matthew 9:12</div>
         </button>
 
         <!-- The rest are listed but not yet wired -->
-       <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="5"
->
-  <div class="text-slate-100">5. New Cloth on an Old Garment</div>
-  <div class="text-slate-400 text-xs">Matthew 9:16</div>
-</button>
-       <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="6"
->
-  <div class="text-slate-100">6. New Wine in Old Wineskins</div>
-  <div class="text-slate-400 text-xs">Matthew 9:17</div>
-</button>
+       <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
+          data-parable="5
+       <div class="text-static-100">5. New Cloth on an Old Garment</div>
+      <div class="text-static-400 text-xs">Matthew 9:16</div>
+      </button>
+       <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
+       data-parable="6">
+       <div class="text-static-100">6. New Wine in Old Wineskins</div>
+      <div class="text-static-400 text-xs">Matthew 9:17</div>
+     </button>
 
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="7"
->
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
+  data-parable="7">
   <div class="text-slate-100">7. Children in the Marketplace</div>
-  <div class="text-slate-400 text-xs">Matthew 11:16–19</div>
+  <div class="text-static-400 text-xs">Matthew 11:16–19</div>
 </button>
         <!-- 8. The Sower -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="8"
->
-  <div class="text-slate-100">8. The Sower</div>
-  <div class="text-slate-400 text-xs">Matthew 13:3–9</div>
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
+  data-parable="8">
+  <div class="text-static-100">8. The Sower</div>
+  <div class="text-static-400 text-xs">Matthew 13:3–9</div>
 </button>
 
 <!-- 9. Lamp on a Stand -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="9"
->
-  <div class="text-slate-100">9. Lamp on a Stand</div>
-  <div class="text-slate-400 text-xs">Mark 4:21–25</div>
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
+  data-parable="9">
+  <div class="text-static-100">9. Lamp on a Stand</div>
+  <div class="text-static-400 text-xs">Mark 4:21–25</div>
 </button>
 
 <!-- 10. The Growing Seed -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="10"
->
-  <div class="text-slate-100">10. The Growing Seed</div>
-  <div class="text-slate-400 text-xs">Mark 4:26–29</div>
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
+  data-parable="10">
+  <div class="text-static-100">10. The Growing Seed</div>
+  <div class="text-static-400 text-xs">Mark 4:26–29</div>
 </button>
 
 <!-- 11. The Mustard Seed -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="11"
->
-  <div class="text-slate-100">11. The Mustard Seed</div>
-  <div class="text-slate-400 text-xs">Matthew 13:31–32</div>
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
+  data-parable="11">
+  <div class="text-static-100">11. The Mustard Seed</div>
+  <div class="text-static-400 text-xs">Matthew 13:31–32</div>
 </button>
 
 <!-- 12. The Yeast / Leaven -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="12"
->
-  <div class="text-slate-100">12. The Yeast / Leaven</div>
-  <div class="text-slate-400 text-xs">Matthew 13:33</div>
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
+  data-parable="12">
+  <div class="text-static-100">12. The Yeast / Leaven</div>
+  <div class="text-static-400 text-xs">Matthew 13:33</div>
 </button>
        <!-- 13. The Weeds and the Wheat -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="13"
->
-  <div class="text-slate-100">13. The Weeds and the Wheat</div>
-  <div class="text-slate-400 text-xs">Matthew 13:24–30</div>
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
+  data-parable="13">
+  <div class="text-static-100">13. The Weeds and the Wheat</div>
+  <div class="text-static-400 text-xs">Matthew 13:24–30</div>
 </button>
 
 <!-- 14. The Hidden Treasure -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="14"
->
-  <div class="text-slate-100">14. The Hidden Treasure</div>
-  <div class="text-slate-400 text-xs">Matthew 13:44</div>
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
+  data-parable="14">
+  <div class="text-static-100">14. The Hidden Treasure</div>
+  <div class="text-static-400 text-xs">Matthew 13:44</div>
 </button>
 
 <!-- 15. The Pearl of Great Price -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="15"
->
-  <div class="text-slate-100">15. The Pearl of Great Price</div>
-  <div class="text-slate-400 text-xs">Matthew 13:45–46</div>
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
+  data-parable="15">
+  <div class="text-static-100">15. The Pearl of Great Price</div>
+  <div class="text-static-400 text-xs">Matthew 13:45–46</div>
 </button>
 
 <!-- 16. The Net -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="16"
->
-  <div class="text-slate-100">16. The Net</div>
-  <div class="text-slate-400 text-xs">Matthew 13:47–50</div>
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
+  data-parable="16">
+  <div class="text-static-100">16. The Net</div>
+  <div class="text-static-400 text-xs">Matthew 13:47–50</div>
 </button>
 
 <!-- 17. The Scribe as Householder -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="17"
->
-  <div class="text-slate-100">17. The Scribe as Householder</div>
-  <div class="text-slate-400 text-xs">Matthew 13:52</div>
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
+  data-parable="17">
+  <div class="text-static-100">17. The Scribe as Householder</div>
+  <div class="text-static-400 text-xs">Matthew 13:52</div>
 </button
             <!-- 18. The Two Debtors -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
   data-parable="18">
-  <div class="text-slate-100">18. The Two Debtors</div>
-  <div class="text-slate-400 text-xs">Luke 7:41–43</div>
+  <div class="text-static-100">18. The Two Debtors</div>
+  <div class="text-static-400 text-xs">Luke 7:41–43</div>
 </button>
 
 <!-- 19. The Strong Man -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
   data-parable="19">
-  <div class="text-slate-100">19. The Strong Man</div>
-  <div class="text-slate-400 text-xs">Matthew 12:29</div>
+  <div class="text-static-100">19. The Strong Man</div>
+  <div class="text-static-400 text-xs">Matthew 12:29</div>
 </button>
 
 
 <!-- 20. Return of the Unclean Spirit -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
   data-parable="20">
-  <div class="text-slate-100">20. Return of the Unclean Spirit</div>
-  <div class="text-slate-400 text-xs">Matthew 12:43–45</div>
+  <div class="text-static-100">20. Return of the Unclean Spirit</div>
+  <div class="text-static-400 text-xs">Matthew 12:43–45</div>
 </button>
   
 <!-- 21. The Unforgiving Servant -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
   data-parable="21">
-  <div class="text-slate-100">21. The Unforgiving Servant</div>
-  <div class="text-slate-400 text-xs">Matthew 18:23–35</div>
+  <div class="text-static-100">21. The Unforgiving Servant</div>
+  <div class="text-static-400 text-xs">Matthew 18:23–35</div>
 </button>
 
 <!-- 22. The Good Samaritan -->
 <button
-  class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
+  class="w-full text-left px-3 py-2 rounded-lg hover:bg-static-800/80 parable-item"
   data-parable="22">
-  <div class="text-slate-100">22. The Good Samaritan</div>
-  <div class="text-slate-400 text-xs">Luke 10:25–37</div>
+  <div class="text-static-100">22. The Good Samaritan</div>
+  <div class="text-static-400 text-xs">Luke 10:25–37</div>
 </button>
 
 <!-- 23. The Friend at Midnight -->
@@ -263,16 +243,14 @@
         !-- 24. The Rich Fool -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="24"
->
+  data-parable="24">
   <div class="text-slate-100">24. The Rich Fool</div>
   <div class="text-slate-400 text-xs">Luke 12:16–21</div>
 </button>
         <!-- 25. The Watchful Servants -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="25"
->
+  data-parable="25">
   <div class="text-slate-100">25. The Watchful Servants</div>
   <div class="text-slate-400 text-xs">Luke 12:35–40</div>
 </button>
@@ -280,8 +258,7 @@
 <!-- 26. The Wise and Faithful Manager -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="26"
->
+  data-parable="26">
   <div class="text-slate-100">26. The Wise and Faithful Manager</div>
   <div class="text-slate-400 text-xs">Luke 12:42–48</div>
 </button>
@@ -289,8 +266,7 @@
 <!-- 27. The Barren Fig Tree -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="27"
->
+  data-parable="27">
   <div class="text-slate-100">27. The Barren Fig Tree</div>
   <div class="text-slate-400 text-xs">Luke 13:6–9</div>
 </button>
@@ -298,8 +274,7 @@
 <!-- 28. The Lowest Seat -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="28"
->
+  data-parable="28">
   <div class="text-slate-100">28. The Lowest Seat</div>
   <div class="text-slate-400 text-xs">Luke 14:7–11</div>
 </button>
@@ -307,8 +282,7 @@
 <!-- 29. The Great Banquet -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="29"
->
+  data-parable="29">
   <div class="text-slate-100">29. The Great Banquet</div>
   <div class="text-slate-400 text-xs">Luke 14:15–24</div>
 </button>
@@ -316,8 +290,7 @@
 <!-- 30. Counting the Cost -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="30"
->
+  data-parable="30">
   <div class="text-slate-100">30. Counting the Cost</div>
   <div class="text-slate-400 text-xs">Luke 14:28–33</div>
 </button>
@@ -325,8 +298,7 @@
 <!-- 31. The Lost Sheep -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="31"
->
+  data-parable="31">
   <div class="text-slate-100">31. The Lost Sheep</div>
   <div class="text-slate-400 text-xs">Luke 15:3–7</div>
 </button>
@@ -334,8 +306,7 @@
 <!-- 32. The Lost Coin -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="32"
->
+  data-parable="32">
   <div class="text-slate-100">32. The Lost Coin</div>
   <div class="text-slate-400 text-xs">Luke 15:8–10</div>
 </button>
@@ -343,8 +314,7 @@
 <!-- 33. The Prodigal Son -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="33"
->
+  data-parable="33">
   <div class="text-slate-100">33. The Prodigal Son</div>
   <div class="text-slate-400 text-xs">Luke 15:11–32</div>
 </button>
@@ -352,8 +322,7 @@
 <!-- 34. The Shrewd Manager -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="34"
->
+  data-parable="34">
   <div class="text-slate-100">34. The Shrewd Manager</div>
   <div class="text-slate-400 text-xs">Luke 16:1–13</div>
 </button>
@@ -361,8 +330,7 @@
 <!-- 35. The Rich Man and Lazarus -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="35"
->
+  data-parable="35">
   <div class="text-slate-100">35. The Rich Man and Lazarus</div>
   <div class="text-slate-400 text-xs">Luke 16:19–31</div>
 </button>
@@ -370,8 +338,7 @@
 <!-- 36. The Unworthy Servants -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="36"
->
+  data-parable="36">
   <div class="text-slate-100">36. The Unworthy Servants</div>
   <div class="text-slate-400 text-xs">Luke 17:7–10</div>
 </button>
@@ -379,8 +346,7 @@
 <!-- 37. The Persistent Widow -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="37"
->
+  data-parable="37">
   <div class="text-slate-100">37. The Persistent Widow</div>
   <div class="text-slate-400 text-xs">Luke 18:1–8</div>
 </button>
@@ -388,8 +354,7 @@
 <!-- 38. The Pharisee and the Tax Collector -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="38"
->
+  data-parable="38">
   <div class="text-slate-100">38. The Pharisee and the Tax Collector</div>
   <div class="text-slate-400 text-xs">Luke 18:9–14</div>
 </button>
@@ -397,8 +362,7 @@
 <!-- 39. The Workers in the Vineyard -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="39"
->
+  data-parable="39">
   <div class="text-slate-100">39. The Workers in the Vineyard</div>
   <div class="text-slate-400 text-xs">Matthew 20:1–16</div>
 </button>
@@ -406,8 +370,7 @@
 <!-- 40. The Ten Minas -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="40"
->
+  data-parable="40">
   <div class="text-slate-100">40. The Ten Minas</div>
   <div class="text-slate-400 text-xs">Luke 19:11–27</div>
 </button>
@@ -415,8 +378,7 @@
 <!-- 41. The Two Sons -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="41"
->
+  data-parable="41">
   <div class="text-slate-100">41. The Two Sons</div>
   <div class="text-slate-400 text-xs">Matthew 21:28–32</div>
 </button>
@@ -433,8 +395,7 @@
 <!-- 43. The Wedding Banquet -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="43"
->
+  data-parable="43">
   <div class="text-slate-100">43. The Wedding Banquet</div>
   <div class="text-slate-400 text-xs">Matthew 22:1–14</div>
 </button>
@@ -442,8 +403,7 @@
 <!-- 44. The Lesson of the Fig Tree -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="44"
->
+  data-parable="44">
   <div class="text-slate-100">44. The Lesson of the Fig Tree</div>
   <div class="text-slate-400 text-xs">Matthew 24:32–35</div>
 </button>
@@ -451,8 +411,7 @@
 <!-- 45. The Thief in the Night -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="45"
->
+  data-parable="45">
   <div class="text-slate-100">45. The Thief in the Night</div>
   <div class="text-slate-400 text-xs">Matthew 24:42–44</div>
 </button>
@@ -460,8 +419,7 @@
 <!-- 46. The Ten Virgins -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="46"
->
+  data-parable="46">
   <div class="text-slate-100">46. The Ten Virgins</div>
   <div class="text-slate-400 text-xs">Matthew 25:1–13</div>
 </button>
@@ -478,8 +436,7 @@
 <!-- 48. The Sheep and the Goats -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="48"
->
+  data-parable="48">
   <div class="text-slate-100">48. The Sheep and the Goats</div>
   <div class="text-slate-400 text-xs">Matthew 25:31–46</div>
 </button>
@@ -487,8 +444,7 @@
 <!-- 49. The Door and the Shepherd -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="49"
->
+  data-parable="49">
   <div class="text-slate-100">49. The Door and the Shepherd</div>
   <div class="text-slate-400 text-xs">John 10:1–18</div>
 </button>
@@ -496,8 +452,7 @@
 <!-- 50. The Vine and the Branches -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="50"
->
+  data-parable="50">
   <div class="text-slate-100">50. The Vine and the Branches</div>
   <div class="text-slate-400 text-xs">John 15:1–8</div>
 </button>
@@ -505,8 +460,7 @@
 <!-- 51. The Children of the Bridechamber -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="51"
->
+  data-parable="51">
   <div class="text-slate-100">51. The Children of the Bridechamber</div>
   <div class="text-slate-400 text-xs">Mark 2:19–20</div>
 </button>
@@ -514,8 +468,7 @@
 <!-- 52. The Divided Kingdom -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="52"
->
+  data-parable="52">
   <div class="text-slate-100">52. The Divided Kingdom</div>
   <div class="text-slate-400 text-xs">Mark 3:23–26</div>
 </button>
@@ -523,8 +476,7 @@
 <!-- 53. The Blind Leading the Blind -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="53"
->
+  data-parable="53">
   <div class="text-slate-100">53. The Blind Leading the Blind</div>
   <div class="text-slate-400 text-xs">Luke 6:39</div>
 </button>
@@ -532,8 +484,7 @@
 <!-- 54. The Tree and Its Fruit -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="54"
->
+  data-parable="54">
   <div class="text-slate-100">54. The Tree and Its Fruit</div>
   <div class="text-slate-400 text-xs">Luke 6:43–45</div>
 </button>
@@ -541,8 +492,7 @@
 <!-- 55. The Moneylender and the Two Debtors -->
 <button
   class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-  data-parable="55"
->
+  data-parable="55">
   <div class="text-slate-100">55. The Moneylender and the Two Debtors</div>
   <div class="text-slate-400 text-xs">Luke 7:41–43</div>
 </button>
