@@ -44,7 +44,7 @@
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
       }
 
-      /* ONLY the Scripture verses use this color */
+      /* ONLY Scripture verses should be amber */
       .red-letter {
         color: #b45309; /* amber */
       }
@@ -276,6 +276,7 @@
       </div>
     </main>
 
+    <!-- PARABLE CONTENTS -->
     <script>
       const parables = {
         1: `
@@ -312,276 +313,12 @@
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Divine Interpretation
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    This passage defines the functional identity of a believer in relation to the world. Salt serves as a
-    preservative and a seasoning. Spiritually, this means Christians are called to hinder moral decay in society
-    and bring the flavor of God's grace to human interactions.
-  </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    Light represents truth, holiness, and guidance. Just as light dispels darkness, the lives of believers should
-    expose falsehood and reveal the path of God. The overarching theological message is that faith is not a
-    private matter but a public mission. If a believer's life is indistinguishable from the world—like salt losing
-    its flavor or a lamp hidden under a basket—they fail to fulfill the divine purpose of bringing glory to God
-    through visible good works.
-  </p>
-</section>
-
-<section class="mb-6">
-  <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
-    Historical and Cultural Context
-  </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    In the ancient Near East, salt was often harvested from the shores of the Dead Sea and was mixed with various
-    minerals and impurities. If the sodium chloride dissolved or leached out due to moisture, only a grit of
-    tasteless minerals remained, which was useless for preservation or seasoning and was literally thrown into
-    paths to harden the ground.
-  </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    The "city on a hill" likely alludes to towns built with white limestone that would gleam under the sun and be
-    visible from miles away, and at night due to their fires. Furthermore, the lamps mentioned were small handheld
-    clay oil lamps. Putting one under a bushel—a large grain measuring basket—would not only hide the light but
-    would likely extinguish the flame due to lack of oxygen.
-  </p>
-</section>
-
-<section class="mb-2">
-  <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
-    Modern Application
-  </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    An example can be found in a corporate environment where office politics and dishonest shortcuts are the norm.
-    An employee acts as "salt" when they refuse to engage in harmful gossip, thereby preventing a toxic culture
-    from spreading further. They act as "light" when they choose to be transparent about their mistakes and give
-    credit to others, even when it may cost them a promotion.
-  </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    When colleagues notice this consistent integrity and ask why they act differently, the employee has an
-    opportunity to explain their motive—thereby pointing others toward the source of their values and shining
-    their light in a way that benefits the entire workplace.
-  </p>
-</section>
-`,
-
-        2: `<p class="text-center text-amber-700">Parable 2 content coming soon.</p>`,
-        3: `<p class="text-center text-amber-700">Parable 3 content coming soon.</p>`,
-        4: `<p class="text-center text-amber-700">Parable 4 content coming soon.</p>`,
-        5: `<p class="text-center text-amber-700">Parable 5 content coming soon.</p>`,
-        6: `<p class="text-center text-amber-700">Parable 6 content coming soon.</p>`,
-        7: `<p class="text-center text-amber-700">Parable 7 content coming soon.</p>`,
-        8: `<p class="text-center text-amber-700">Parable 8 content coming soon.</p>`,
-        9: `<p class="text-center text-amber-700">Parable 9 content coming soon.</p>`,
-        10: `<p class="text-center text-amber-700">Parable 10 content coming soon.</p>`,
-        11: `<p class="text-center text-amber-700">Parable 11 content coming soon.</p>`,
-        12: `<p class="text-center text-amber-700">Parable 12 content coming soon.</p>`,
-        18: `<p class="text-center text-amber-700">Parable 18 content coming soon.</p>`,
-        19: `<p class="text-center text-amber-700">Parable 19 content coming soon.</p>`,
-        20: `<p class="text-center text-amber-700">Parable 20 content coming soon.</p>`,
-        23: `<p class="text-center text-amber-700">Parable 23 content coming soon.</p>`,
-      };
-
-      const contentDiv = document.getElementById("parable-content");
-      const items = document.querySelectorAll(".parable-item");
-      const counter = document.getElementById("parable-counter");
-
-      function showParable(number) {
-        const html = parables[number];
-        if (!html) return;
-        contentDiv.innerHTML = html;
-        if (counter) {
-          counter.textContent = `${number} of 55 · Gospel overview`;
-        }
-      }
-
-      items.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const num = parseInt(btn.getAttribute("data-parable"), 10);
-          showParable(num);
-
-          items.forEach((b) =>
-            b.classList.remove("bg-slate-800", "border-slate-700")
-          );
-          btn.classList.add("bg-slate-800", "border-slate-700");
-        });
-      });
-
-      // Show Parable 1 on first load
-      showParable(1);
-    </script>
-  </body>
-</html>
-After you paste this, Parable 1 should:
-
-Look like your design
-Have only the Holy Scripture verses in amber
-Have all fonts consistent for headings and body text.
-If something still looks off after pasting, tell me exactly what’s wrong (e.g. “this heading is amber, it should be dark”), and I’ll send just that one tiny fix.
-
-
-Insert
-
-"3. The W"
-Selected text
-thank u very much
-Thinking
-You’re welcome, Christina — glad we got it to where you wanted.
-
-Whenever you’re ready to start filling in Parable 2, 3, etc. with the same structure, send me one parable at a time and I’ll format it to match your current
-
-this is one through ten   
-
- Parable one of 55 Matthew Salt of the earth and Light of the world Matthew 5:13 through 16
-
- the Holy Scripture you are the salt of the earth but if Saul has lost his taste taste how shall its saltiness be restored it is no longer good for anything said to be thrown out and trampled under people's feet you are the light of the world a city set on a hill cannot be hidden nor do people light a lamp and put it under a basket but on a stand and give it slight to all in the house in the same way let your light shine before others so that they may see your good works and give glory to your Father who is in heaven
-
- Divine interpretation the primary lesson that believers must possess a distinct character that positively impacts the world salt represents preservation and seasoning just as salt prevents meat from rotting Christians are called to prevent moral decades in society light represents visibility and truth believers are tasked with making the reality of God's kingdom visible through our conduct theologically this suggests that an invisible or blended in faith is ineffective the ultimate goal of this distinctiveness is not self exhausting but to direct the observers attention and praise towards God
-
- Historical and cultural context in the 1st century salt was frankly harvested from the Dead Sea and often contained impurities and the sodium chloride dissolved away the remaining miner residue looks like salt but lacks its properties making it loose for anything except paving paths regarding the light ancient homes were small and dark with only 1 or two tiny windows a single lamp on a sand could illuminate the entire place a bustle was a common household measure basket placing it over a lamp would only hide the light but eventually extinguished the flame due to lack of oxygen
-
- modern application imagine a high school student who joins a social circle where bullying and academic dishonesty are common instead of joining it to fit in the student constantly speaks up for marginalized and maintains personal integrity in their school work by refusing to let the environment's ethics decay further They act as salt by being open their by being open about their faith motives their kindness they act as light their peers and teachers notice this different behavior which creates opportunities for the students to share the source of their values thereby pointing others to God
-
- Parable two of 55 Matthew Lu The Spec and the Plan Matthew 73
-
- I mean the Holy Scripture Why do you seek the spec that is in your brother's eye but do not notice the log that is in your own eye or how can you say to your brother let me take that speck out of your eye when you you're when there is the log in your own eye you hypocrite first take the log out of your own eye and then you will see clearly to take the spec out of your brother's eye matthew 735 ESB
-
- Divine Interpretation The parable serving as a warning against hypocrisy and self righteousness jesus teaches that spiritual discriminate begins with righteous self examination rather than the condemning of others the primary theological lesson is that humans are often blinded by their own massive moral feelings which makes them unfit to judge or guide others effectively by addressing their our own significant sins first we gain the the necessary community empathy and clarity required to offer general helpful correction to others regarding their minor struggles It emphasizes that eternal transformation must precede external correction
-
- historical and cultural context jesus utilized a classic Middle Eastern rehistoric device known as hyperbole deliberate exaggeration to _a point the spec refers to a tiny bit of dry shaft or small small splinter while the log or prank refers to a massive structural timber used to support the roof of a house the mental image of a person attempted to perform delicate or ocular surgery while having a massive construction beam protruding from their own face was intended to be humorous and obscured Highlighting the ridiculous nature of judging others while ignoring owns one blant fault
-
- modern Application Imagine a senior manager who frequently berates his employees during staff meetings for FI for being five minutes late or for making minor typos in their emails however this manager is currently under investigation for embezzling company funds and constantly failing to meet his primary quarterly objectives to apply this parable the manager must first address his own serious ethical professional failures before he can reasonably or effectively expect to mentor his staff on the spec of minor punctuality or his clerical errors
-
- Parable three of 55 Matthew Luke the Wise and the Foolish Builders Matthew 7:24 27
-
- the Holy Scripture everyone then who hears these words of mine and does them will be like a wise man who built his house on a rock and the man and the rain fell and the floods came and the winds blew in the beat on that house but it did not fall because it was founded on the rock and everyone who hears these words of mine and does not do them would be like a foolish man who built his house on the sand and the rain fell and the floods came and the winds blew and beat against that house and it fell and great was the fall of
-
- Divine interpretation this parable serves as the climax of the Sermon on the Mount emphasizing that the of one's faith is proven through action rather than more mere audition the Rock represents the enduring truth of crisis teachings which provide a stable foundation against the inevitable storms of life and a final finality of divine judgment the same represents human centric philosophies superficial religious or the pursuit of temporary security the court theological message is that true wisdom is synonymous with obedience to God's Word and those who ignore this call will practice what they hear risk ultimate spiritual catastrophe
-
- historical and cultural context In the ancient Near East specifically in the geographical surrounding Israel buildings often encountered driver beds that looked like ideal flat building sites during the dry season however these errors were prone to sudden and violent flash floods during the winter rains to build on the rock laboriously digging through layers of sand and clay to reach the limestone bear rock to task a task requiring significant effort and foresight The foolish builder is characterized by a desire for convenience and speed ignoring the historical environmental reality that the ground beneath them is subject to sudden drastic change
-
- modern application considered two professionals building their careers one person focused on developing deep technical skills maintaining high ethical standards and cultivating genuine professional relationships The other focuses solely on self promotion cutting corners to increase short term metrics and leveraging office politics to climb that ladder quickly when the industry faces a massive economic downturn or a technical technological disruption the first professionals reputation and foundation foundational skills allow them to pivot and survive while the 2nd professionals career built on a superficial image and shortcuts collapses entirely under pressure
-
- Parable of 55 Matthew Mark Luke The Physician Matthew 912
-
- The Holy Scripture but when he heard it he said those who are well have no need of a position but those who are sick
-
- divine interpretation this parable emphasizes that Jesus mission is to focus on those who recognize their spiritual poverty and moral failings the sickness is a metaphor for sin and the physician represents Jesus as a source of grace and healing it teaches that the primary obstacle of salvation is not the depth of 1 sin but the pride of self righteousness only those who can admit their need for the Savior can receive the spiritual restoration He offers
-
- Historical and cultural context in the cultural context of the Second Temple. The Pharisees adhered to a strict code of virtual poetry and social separation from sinners those who did not strictly follow the law they viewed association with such people as spiritually contagious and defiling jesus used this physician analogy to subvert the logic arguing that a doctor's duty is to be where the illness is he redefined holiness not as a withdrawal from the world but as a transformative power that seeks out the marginalized
-
- modern application imagine two people struggling with deep seated anxiety 1 person refuses to acknowledge any mental health struggle to maintain a perfect social media image while the other admits that they are drowning and seeks out a counselor the one who maintains a fascade remains trapped in their sufferings whereas the one who admits their sickness and enters therapy begins the process of recovery This mirrors the superior spiritual truth that help is only accessible to those who stop pretending they are OK
-
- Parable number five of 55 Matthew Mark Luke new cloth on an Old garment Matthew 9:16
-
- The Holy Scripture no one puts a piece of unshrunk cloth on an over garment for the patch tears away from the garment and a worse tear is made
-
- Divine Interpretation this parable signifies that the New Covenant bought by Jesus Christ can only be merely appended to the Old Covenant of Legalism ritual Jesus highlights that his message of grace and the Kingdom of Heaven is a radical departure from the existing religious structures at the time to try and mix the two adding the spiritual freedom to the gospel to the rigged constraints the law creates a fundamental incompatibility that eventually leads to spiritual ruin it teaches that true transformation requires a complete renewal of the person rather than just superficial religious adjustments
- historical and cultural context in the 1st century clothing was primarily made of wool linen which was prone to shrinking when first washed the unshrunk patch of cloth was new material that had never been warm at this new strong fabric was sewn into an old brittle garment that had already reached its maximum shrinkage the first time the repair item was cleaned the new patch would shrink and exert massive tendons on the weakened O threads this would cause a patch to whip away making the original hole even larger and the garment useless
-
- modern application consider an athlete who wants to achieve peak performance through a cutting edge high intensity training program but refused to give up a diet of processed junk food and irregular sleep instead of the nutrients making them stronger the physical stress of the elite program combined with the lack of proper nutrition causes their body to break down leading to injury just that the LA cannot patch their old unhealthy lifestyle with a new workout a person cannot experience the full power of a spiritual life by simply adding a few good deeds to the foundation of old destructive habits Par
-
- Parable number Six of 55 Matthew Mark and Luke New Wine and Old Wineskins Matthew 9:17
-
- The Holy Scripture neither the new wine put into old wineskins if it is the skins burst and the wine is spilled and the skins are destroyed but new wine is put into fresh wine skins and so both are preserved
-
- divine interpretation the parable illustrates the incompatibility between the new covenant of grace established by Jesus and the rigid structure of the O Covenant jesus indicates that this message of salvation and the presence of the new Holy Spirit cannot be contained within the old religious frameworks or traditions of the Pharisees it can it calls for a total transformation of the heart and mind suggesting a person must be spiritually renewed becoming a new creation to receive and sustain the transform transformative power of God's grace without reverting to old dead patterns of work based righteousness new par historical and cultural context in the 1st century wineskins were typically made of animal highs such as goat skin when wine is new IT contains a it continues to firm firm it and release carbon dioxide which causes the container to expand if fresh wine is going to is supple and elastic enough to stretch during this process however an old wineskin has already stretched to its limit and becomes dry and bright over time if new one is placed inside an old wineskin the pressure from the fermenting gasses will cause the inelastic skin to crack and burst results in the loss of both the wine and the container
-
- Modern application Imagine a person who expresses a profound spiritual awakening and decides to live with radical integrity and selfishness yet they try to keep their old lifestyle of cutthroat corporate greed and dishonest social climbing the new winner they were transformed consciousness creates immense immense pressure against their old wineskins of corrupt habits and toxic friendships eventually the conflict becomes unsustainable the person must either abandoned their new values or completely change their environment and social structures to accommodate their new life proving that a renewed spirit requires a renewed way of living
-
- Parable seven of 55 Matthew Luke children in the marketplace Matthew 11:16 to 19
-
- the Holy Scripture but to what I shall compare this generation it's like a it's like children sitting in the marketplace and calling to their playmates we play the flute for you and you did not dance we sang in you did not mourn for John came neither eating nor drinking and they say he has a demon the My Son of man came eating and drinking and they say look at him and Glenn and a drunkard in front of tax collectors and sinners yet wisdom is justified by her deeds
-
- divine interpretation the parable addresses the spiritual stubbornness of a people who refuse to be moved by God's diverse approach to salvation but comparing the generation to children who refuse to play along with either a wedding game or a funeral game she's exposed the hypocrisy of religious leaders they reject John the Baptist for his extreme acts and Jesus for his radical inclusion the theological significance lies in the warning against judgmentalism in the instance that God's wisdom is ultimately validated by its fruit the deeds rather than by superficial preferences of critics
-
- historical and cultural context the marketplace served as a public store where children quickly improvise games based on two most significant social events at the time weddings joyful flutes and funerals mourningful whales the playmates in the parable represent the messrs of God while the children represented the unresponsive audience to not dance or to not mourn refers to a total lack of empathy or responds to the spiritual atmosphere being present presented indicating a heart that is intentionally out of sync with the divine timing
-
- modern application in modern equivalent is an employee who critiques every management style to avoid working if the manager is hands on the employee calls it macro management if the manager gives freedom the employee complaints about a lack of direction the issue isn't the management style but the employees desire to remain uncooperative similarity a person who might reject a church for being too traditional but then rejects a contemporary church for lacking death uses these contrary contradictory excuses to avoid a person in personal encounter with the Gospels demands
-
- Parable 8 of 55 Matthew Mark Luke The Sower Matthew 13 39
-
- The holy Scripture and he said told them many many things in parables saying A sorrow went out to sow and he saw sowed some seeds fell along the path and the birds came and devoured them other seeds fell on rocky ground where they did not have much soil and immediately sprang up since they had no depth of soil but when the sun rose they were scorched and since they had no root they wither away other seeds fell among thorns and the thorns grew up and choked them other seeds fell on good soil and and produce grains some 100 folds from 60 and some 30 he who has ears let him hear paragraph Divine interpretation the parable illustrates four ways of people receive the gospel the sower is the one who proclaims God's Word and the seed is the message itself the foresaws represent the condition of the human heart a path is a hardened heart that rejects the Word the rocky round is a shallow heart that fails under trial the thorny ground is a destruction heart overwhelmed by worldly cares and wealth and the good soil represents heart that understands accepts and produces abundant spiritual fruit The primary theological lesson is the effectiveness of God's word depends on the spiritual receptivity and readiness of the individual listener
- historical and cultural context in the ancient Near East farmers practice broadcast sewing where seeds were thrown by hand before the fields was plowed the path referred to the hard packed dirt that trekked between fields used by travelers the rocky ground was not just soiled with stones but a thin layer of topsoil covering a solid shelf of limestone which would trap heat and moisture to cause rapid growth but prevent deep root systems to harvest Shields a 3060 or 100 times the amount shown were considered miraculous or exceptionally prosperous as a standard harvest was typically only seven to 10 times the amount of seed use
-
- modern application consider four people hearing a podcast about the importance of living a life of integrity to first person ignores it to focus on a mobile game the 2nd person is inspired for one day but lies to their boss the moment they fear getting in trouble the 3rd person wants to be honest but continues to use deceptive business practices because they are obsessed with becoming a millionaire the 4th person listens and reflects on their flaws and begins making honest choices even when it costs them money eventually becoming a trusted leader whose character inspires an entire company to operate ethically
-
- Parable number nine of 55 Matthew Mark Luke the Lamp on a stand Mark 4:21 25
-
- the Holy Scripture and he said to them is a lamp brought in to be put under a basket or under a bed and not understand for nothing is hidden except to be made and manifest nor is anything secret except to come to light if anyone hears anyone has ears to hear let him hear and he said to them pay attention to what you hear with the measure you use it will be measured to you and still more will be added to you for to the one who has more will be given and from the one who has not even what he has will be taken away
-
- Divine Interpretation the primary theological significance of this parable is that the revelationary nature of the kingdom of God Jesus the light of the world did not come to remain an obscured secret but to be revealed to all the lamp represents the gospel truth which demands exposure and action the teaching emphasizes spiritual replicas see the degree of a person person learns and obedience to God's Word determines their capacity to review further revelations receive further revelations To have is to possess a heart that acts on the truth leading to abundance of spiritual insight whereas a close or indifferent heart leads to loss of even the basic understanding on initially possessed when initially possessed
-
- repurposed to explain that God's spiritual gifts are dispensed in proportion to a disciples willingness to listen and apply the teachings
-
- Imagine a talented oh wait modern application imagine a talented software engineer who discovers a revolutionary where to approve data privacy for everyone if they hide the code in a private folder out of fear of of apathy that discover benefits not no one and their own skills eventually stagnate however if they share the light with the community and apply it to their work they gain more insights collaborators and opportunities in a spiritual sense when a person experience the peace of their faith but hides from their colleagues or family to avoid social discomfort they eventually find their own sense of purpose faith dimming conversely the more they openly live out their values and shape their hope the more their own spiritual understandings and joy increase
-
- Parable 10 of 55 Mark the groin seed mark 4:26 29
-
- the Holy Scripture and he said The kingdom of God is as if a man should scatter seed on the ground he sleeps and rises night and day and the seeds sprout and grows he knows not how the earth produces by itself burst a blade then the ears in the full grain in the ear but then the grain is ripped ripe at once he puts it in the sickle because the harvest has came
-
- define interpretation the parable emphasizes the Savior and mysterious power of God's Word it teachings that while humans are responsible for the initial s the actual spiritual transformation and growth are entirely the work of God this growth happens according to a divine timeline that is independent of human effort or observation teaching believers to trust God's faithfulness and the inherited vitality of His kingdom rather than relying on their own cleverness or constant want monitoring
-
- Historical and cultural context The phrase the earth produces by itself utilizes the Greek word enemy which is the root of the English word automatic in the ancient context this highlighted the miraculous nature of life where a farmer understood the labor of planting and harvesting but viewed the actual biological growth as a mysterious mystery of nature additionally the sickle and the harvest are traditional biblical symbols for the end of the age and the final gathering of the faithful signaling that God's work will eventually reach a planned and complete conclusion
-
- modern application Consider a person who volunteers at a local community centered teaching literacy they spend months patiently reading with students often feeling like no progress is being made after the program ends the volunteer loses touch with those students years later they can discover the student has graduated from college and is now a writer to volunteer sold the initial skill but the internal drive and then intellectual development and eventual success happen automatically through the students own journey and God's Providence Province far beyond the voluntary discrete control or site
-Thanks for pasting all the wording—now I’ll give you one clean, ready-to-paste block for parables 1–10 that matches your style and requirements.
-
-Below is a drop‑in script block you can paste into your index.html to replace your current const parables = { ... }.
-
-What this does (exactly what you asked):
-
-Parables 1–10 fully wired with your wording.
-Same structure as Parable 1: title line, Scripture, Divine Interpretation, Historical and Cultural Context, Modern Application.
-Only Holy Scripture verses are amber (using the existing .red-letter class — make sure in your <style> you have .red-letter { color: #b45309; }).
-All section headings use font-dm-display so they match each other.
-Body text uses Forum so Divine Interpretation and others match.
-Step 1 – Make sure your CSS has amber for verses
-In your <style> at the top of index.html, be sure you have this:
-
-.red-letter {
-  color: #b45309; /* amber */
-}
-Step 2 – Replace your whole const parables = { ... } with this
-<script>
-  const parables = {
-    1: `
-<section class="mb-6">
-  <p class="text-center text-sm md:text-base text-amber-700 font-dm-display">
-    Parable 1 of 55 – Salt of the Earth &amp; Light of the World
-  </p>
-  <p class="text-center text-base md:text-lg font-waterfall mt-2">
-    Matthew 5:13–16
-  </p>
-</section>
-
-<section class="mb-6">
-  <h3 class="text-xl md:text-2xl font-dm-display italic mb-3 text-amber-900">
-    Holy Scripture
-  </h3>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 md:p-5 leading-relaxed font-dm-display red-letter">
-    <p class="mb-2">
-      "You are the salt of the earth, but if salt has lost its taste, how shall its saltiness be restored?
-      It is no longer good for anything except to be thrown out and trampled under people's feet.
-    </p>
-    <p class="mb-2">
-      You are the light of the world. A city set on a hill cannot be hidden.
-      Nor do people light a lamp and put it under a basket, but on a stand, and it gives light to all in the house.
-    </p>
-    <p>
-      In the same way, let your light shine before others, so that they may see your good works and give glory
-      to your Father who is in heaven."
-    </p>
-  </div>
-</section>
-
-<section class="mb-6">
-  <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
-    Divine Interpretation
-  </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     The primary lesson is that believers must possess a distinct character that positively impacts the world.
     Salt represents preservation and seasoning. Just as salt prevents meat from rotting, Christians are called
     to hinder moral decay in society and bring the flavor of God's grace to human interactions.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
     Light represents visibility and truth. Believers are tasked with making the reality of God's kingdom visible
     through their conduct. Theologically, this suggests that an invisible, blended-in faith is ineffective.
     The ultimate goal of this distinctiveness is not self-exalting, but to direct observers' attention and
@@ -593,12 +330,12 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Historical and Cultural Context
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     In the first century, salt was frequently harvested from the Dead Sea and often contained impurities.
     When the sodium chloride dissolved away, the remaining mineral residue looked like salt but lacked its
     properties, making it useless for anything except paving paths.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
     Ancient homes were small and dark, with only one or two tiny windows. A single lamp on a stand could
     illuminate the entire place. A bushel was a common household measuring basket; placing it over a lamp
     would not only hide the light, but would eventually extinguish the flame due to lack of oxygen.
@@ -609,21 +346,20 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Modern Application
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     Imagine a high school student who joins a social circle where bullying and academic dishonesty are common.
     Instead of joining in to fit in, the student consistently speaks up for the marginalized and maintains
-    personal integrity in their schoolwork, refusing to let the environment's ethics decay further. They act
-    as "salt" by resisting corruption, and as "light" by being open about the faith motives behind their
-    kindness.
+    personal integrity in their schoolwork, refusing to let the environment's ethics decay further.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    Their peers and teachers notice this different behavior, which creates opportunities for the student to
-    share the source of their values, thereby pointing others to God.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    They act as "salt" by resisting corruption, and as "light" by being open about the faith motives behind
+    their kindness. Their peers and teachers notice this different behavior, which creates opportunities for
+    the student to share the source of their values, thereby pointing others to God.
   </p>
 </section>
 `,
 
-    2: `
+        2: `
 <section class="mb-6">
   <p class="text-center text-sm md:text-base text-amber-700 font-dm-display">
     Parable 2 of 55 – The Speck and the Plank
@@ -656,16 +392,16 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Divine Interpretation
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     This parable serves as a warning against hypocrisy and self-righteousness. Jesus teaches that spiritual
     discernment begins with righteous self-examination rather than condemning others. The primary theological
     lesson is that humans are often blinded by their own massive moral failings, which makes them unfit to
     judge or guide others effectively.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
     By addressing our own significant sins first, we gain the humility, empathy, and clarity required to offer
-    genuinely helpful correction to others regarding their minor struggles. It emphasizes that internal
-    transformation must precede external correction.
+    genuinely helpful correction to others regarding their minor struggles. Internal transformation must
+    precede external correction.
   </p>
 </section>
 
@@ -673,12 +409,12 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Historical and Cultural Context
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     Jesus used a classic Middle Eastern rhetorical device known as hyperbole—deliberate exaggeration—to drive
     home the point. The "speck" refers to a tiny bit of dry chaff or a small splinter, while the "log" (or
     plank) refers to a massive structural timber used to support the roof of a house.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
     The mental image of a person attempting to perform delicate eye surgery while having a huge beam protruding
     from their own face was intentionally humorous and absurd, highlighting the ridiculous nature of judging
     others while ignoring one's own blatant faults.
@@ -689,12 +425,12 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Modern Application
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    Imagine a senior manager who frequently berates employees during staff meetings for being five minutes late
-    or for making minor typos in emails. However, this manager is under investigation for embezzling company
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    Imagine a senior manager who frequently berates employees during staff meetings for being five minutes
+    late or making minor typos in emails. However, this manager is under investigation for embezzling company
     funds and consistently failing to meet major objectives.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
     To apply this parable, the manager must first address their own serious ethical and professional failures
     before they can reasonably or effectively mentor staff about the "specks" of minor punctuality or clerical
     errors.
@@ -702,7 +438,7 @@ Step 2 – Replace your whole const parables = { ... } with this
 </section>
 `,
 
-    3: `
+        3: `
 <section class="mb-6">
   <p class="text-center text-sm md:text-base text-amber-700 font-dm-display">
     Parable 3 of 55 – The Wise and the Foolish Builders
@@ -740,16 +476,16 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Divine Interpretation
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     This parable serves as the climax of the Sermon on the Mount, emphasizing that the reality of one's faith is
     proven through action rather than mere admiration. The rock represents the enduring truth of Christ's
     teachings, which provide a stable foundation against the inevitable storms of life and the finality of
     divine judgment.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    The sand represents human-centered philosophies, superficial religion, or the pursuit of temporary security.
-    The core theological message is that true wisdom is synonymous with obedience to God's Word, and those who
-    ignore this call while merely hearing it risk ultimate spiritual catastrophe.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    The sand represents human-centered philosophies, superficial religion, or the pursuit of temporary
+    security. True wisdom is synonymous with obedience to God's Word; those who hear but do not do risk
+    ultimate spiritual catastrophe.
   </p>
 </section>
 
@@ -757,16 +493,14 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Historical and Cultural Context
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    In the ancient Near East, especially in regions around Israel, dry riverbeds often looked like ideal flat
-    building sites during the dry season. However, these areas were prone to sudden and violent flash floods
-    when the winter rains came.
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    In the ancient Near East, dry riverbeds often looked like ideal flat building sites during the dry season.
+    However, these areas were prone to sudden and violent flash floods when the winter rains came.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    To build on the rock required digging laboriously through layers of sand and clay to reach the solid
-    limestone bedrock—a task that demanded effort and foresight. The foolish builder is marked by a desire for
-    convenience and speed, ignoring the environmental reality that the seemingly stable ground beneath them
-    could change suddenly and drastically.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    To build on rock required digging laboriously through sand and clay to reach the solid limestone bedrock,
+    a task demanding effort and foresight. The foolish builder is marked by a desire for convenience and speed,
+    ignoring the environmental reality that the ground beneath them could change suddenly and drastically.
   </p>
 </section>
 
@@ -774,20 +508,19 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Modern Application
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    Consider two professionals building their careers. One focuses on developing deep skills, maintaining high
-    ethical standards, and cultivating genuine relationships. The other focuses almost entirely on self-promotion,
-    cutting corners to boost short-term metrics, and leveraging office politics to climb quickly.
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    Consider two professionals building their careers. One focuses on deep skills, high ethics, and genuine
+    relationships. The other focuses mostly on self-promotion, cutting corners, and office politics.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    When the industry faces a massive economic downturn or technological disruption, the first professional's
-    solid reputation and foundational skills allow them to pivot and survive. The second professional's career,
-    built on a superficial image and shortcuts, collapses entirely under pressure.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    When a major economic downturn or technological disruption comes, the first professional's solid
+    foundation allows them to pivot and survive, while the second, built on image and shortcuts, collapses
+    under pressure.
   </p>
 </section>
 `,
 
-    4: `
+        4: `
 <section class="mb-6">
   <p class="text-center text-sm md:text-base text-amber-700 font-dm-display">
     Parable 4 of 55 – The Physician for the Sick
@@ -812,12 +545,12 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Divine Interpretation
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    This saying emphasizes that Jesus' mission is focused on those who recognize their spiritual poverty and
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    This parable emphasizes that Jesus' mission is focused on those who recognize their spiritual poverty and
     moral failings. The sickness is a metaphor for sin, and the physician represents Jesus as the source of
     grace and healing.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
     It teaches that the primary obstacle to salvation is not the depth of one's sin, but the pride of
     self-righteousness. Only those who admit their need for a Savior can receive the spiritual restoration He
     offers.
@@ -828,14 +561,14 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Historical and Cultural Context
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    In the cultural context of the Second Temple period, the Pharisees adhered to a strict code of ritual purity
-    and social separation from "sinners"—those who did not strictly follow the law. They viewed association with
-    such people as spiritually contaminating and defiling.
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    In the Second Temple period, the Pharisees followed strict codes of ritual purity and social separation
+    from "sinners" who did not observe the law. They saw association with such people as contaminating and
+    defiling.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    Jesus used the physician analogy to subvert their logic, arguing that a doctor's duty is to be where the
-    illness is. He redefined holiness not as withdrawal from the world, but as a transformative power that seeks
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    Jesus used the physician analogy to subvert this logic, arguing that a doctor's duty is to be where the
+    illness is. Holiness, in His view, is not withdrawal from the world but a transforming presence that seeks
     out the marginalized.
   </p>
 </section>
@@ -844,20 +577,19 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Modern Application
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     Imagine two people struggling with deep-seated anxiety. One refuses to acknowledge any mental health
-    struggle in order to maintain a perfect social media image. The other admits they are drowning and seeks out
-    a counselor.
+    struggle to keep a perfect image online. The other admits they are in trouble and seeks a counselor.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    The one who maintains a facade remains trapped in their suffering, whereas the one who admits their
-    "sickness" and enters therapy begins the process of recovery. This mirrors the spiritual truth that help is
-    only accessible to those who stop pretending they are already well.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    The one who maintains a facade remains trapped in their suffering; the one who admits their "sickness" and
+    seeks help begins to recover. Spiritually, help is only accessible to those who stop pretending they are
+    already well.
   </p>
 </section>
 `,
 
-    5: `
+        5: `
 <section class="mb-6">
   <p class="text-center text-sm md:text-base text-amber-700 font-dm-display">
     Parable 5 of 55 – New Cloth on an Old Garment
@@ -873,8 +605,8 @@ Step 2 – Replace your whole const parables = { ... } with this
   </h3>
   <div class="bg-white/80 border border-amber-100 rounded-lg p-4 md:p-5 leading-relaxed font-dm-display red-letter">
     <p>
-      "No one puts a piece of unshrunk cloth on an old garment, for the patch tears away from the garment, and
-      a worse tear is made."
+      "No one puts a piece of unshrunk cloth on an old garment, for the patch tears away from the garment,
+      and a worse tear is made."
     </p>
   </div>
 </section>
@@ -883,15 +615,15 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Divine Interpretation
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     This parable signifies that the new covenant brought by Jesus Christ cannot merely be appended to the old
-    covenant of legalism and ritual. Jesus highlights that His message of grace and the kingdom of heaven is a
-    radical departure from the prevailing religious structures of the time.
+    covenant of legalism and ritual. His message of grace and the kingdom of heaven is a radical departure from
+    the existing religious structures of the time.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    To try to mix the two—adding spiritual freedom in the gospel to the rigid constraints of the law—creates a
-    fundamental incompatibility that eventually leads to spiritual ruin. It teaches that true transformation
-    requires a complete renewal of the person, not just superficial religious adjustments.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    Trying to mix the two—adding spiritual freedom in the gospel to rigid constraints of the law—creates a
+    fundamental incompatibility that leads to spiritual ruin. True transformation requires a complete renewal
+    of the person, not just superficial religious adjustments.
   </p>
 </section>
 
@@ -899,14 +631,13 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Historical and Cultural Context
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    In the first century, clothing was primarily made of wool or linen, both of which were prone to shrinking
-    when first washed. The "unshrunk cloth" was new material that had never been worn or laundered.
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    In the first century, clothing was primarily made of wool or linen, both prone to shrinking when first
+    washed. An unshrunk patch was new fabric that had never been laundered.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    If this new, strong fabric was sewn onto an old, brittle garment that had already finished shrinking, the
-    first time the repaired item was washed, the new patch would shrink and pull on the weakened old threads,
-    causing the patch to rip away and making the original hole even larger.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    If this new, strong fabric was sewn onto an old, brittle garment that had already shrunk fully, washing
+    would cause the patch to shrink and pull away, ripping the old cloth and making the tear worse.
   </p>
 </section>
 
@@ -914,20 +645,19 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Modern Application
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    Consider an athlete who wants peak performance through an intense training program but refuses to give up a
-    diet of processed junk food and irregular sleep. Instead of the new regimen making them stronger, the
-    combination of physical stress and poor habits leads to injury.
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    Consider an athlete who wants to reach peak performance with an intense training program but refuses to
+    change a diet of junk food and poor sleep. Instead of becoming stronger, the combination of stress and poor
+    habits leads to injury.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    Just as they cannot patch an unhealthy lifestyle with a new workout, a person cannot experience the full
-    power of spiritual life by simply adding a few good deeds on top of old destructive habits. A new life in
-    Christ requires a new foundation, not a patch.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    In the same way, a person cannot simply "patch" an old life of destructive habits with a few religious
+    practices and expect deep transformation. A new spiritual life needs a new foundation, not a temporary patch.
   </p>
 </section>
 `,
 
-    6: `
+        6: `
 <section class="mb-6">
   <p class="text-center text-sm md:text-base text-amber-700 font-dm-display">
     Parable 6 of 55 – New Wine in Old Wineskins
@@ -953,15 +683,15 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Divine Interpretation
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     This parable illustrates the incompatibility between the new covenant of grace established by Jesus and the
-    rigid structures of the old covenant. Jesus indicates that His message of salvation and the presence of the
-    Holy Spirit cannot be contained within the old religious frameworks and traditions of the Pharisees.
+    rigid structures of the old covenant. His message of salvation and the presence of the Holy Spirit cannot
+    be contained within the old religious frameworks and traditions of the Pharisees.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    It calls for total transformation of heart and mind, suggesting that a person must be spiritually renewed—
-    becoming a new creation—to receive and sustain the transforming power of God's grace, rather than reverting
-    to old patterns of works-based righteousness.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    It calls for a total transformation of heart and mind, suggesting that a person must be spiritually renewed
+    to receive and sustain the transforming power of God's grace, rather than reverting to old patterns of
+    works-based righteousness.
   </p>
 </section>
 
@@ -969,15 +699,15 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Historical and Cultural Context
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    In the first century, wineskins were typically made from animal hides such as goat skin. New wine continues
-    to ferment and release gases, which causes the container to expand. A fresh wineskin is supple and elastic
-    enough to stretch during this process.
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    In the first century, wineskins were made from animal hides such as goatskin. New wine continues to ferment
+    and release gases, causing the container to expand. A fresh wineskin is supple and elastic enough to
+    stretch with this process.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    An old wineskin, however, has already stretched to its limit and becomes dry and brittle over time. If new
-    wine is placed into it, the pressure from the fermenting gases will cause the inelastic skin to crack and
-    burst, resulting in the loss of both the wine and the container.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    An old wineskin, however, has already stretched to its limit and becomes dry and brittle. If new wine is
+    placed into it, the pressure from fermenting gases will cause it to crack and burst, resulting in the loss
+    of both wine and container.
   </p>
 </section>
 
@@ -985,20 +715,19 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Modern Application
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    Imagine a person who experiences a profound spiritual awakening and decides to live with radical integrity
-    and selflessness, yet tries to keep their old lifestyle of cutthroat corporate greed and dishonest social
-    climbing. The "new wine" of transformed conscience creates immense pressure against the "old wineskins" of
-    corrupt habits and toxic relationships.
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    Imagine a person who experiences a deep spiritual awakening and decides to live with radical integrity and
+    selflessness, yet tries to keep a lifestyle of cutthroat greed and dishonest social climbing. The "new wine"
+    of transformed conscience presses against the "old wineskins" of corrupt habits and toxic relationships.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    Eventually the conflict becomes unsustainable. They must either abandon their new values or completely
-    change their environment and patterns of life. A renewed spirit requires a renewed way of living.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    Eventually the conflict becomes unbearable. They must either abandon their new values or change their
+    environment and patterns of life. A renewed spirit requires a renewed way of living.
   </p>
 </section>
 `,
 
-    7: `
+        7: `
 <section class="mb-6">
   <p class="text-center text-sm md:text-base text-amber-700 font-dm-display">
     Parable 7 of 55 – Children in the Marketplace
@@ -1037,13 +766,13 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Divine Interpretation
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     This parable addresses the spiritual stubbornness of people who refuse to be moved by God's diverse approach
     to salvation. By comparing the generation to children who refuse to join either a "wedding" game or a
-    "funeral" game, Jesus exposes the hypocrisy of religious leaders who rejected John the Baptist for his
-    severity and Jesus for His grace.
+    "funeral" game, Jesus exposes the hypocrisy of religious leaders who rejected John for his severity and
+    Jesus for His grace.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
     The theological significance lies in the warning against judgmentalism and the insistence that God's wisdom
     is ultimately validated by its fruit—by deeds—rather than by the superficial preferences of critics.
   </p>
@@ -1053,14 +782,14 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Historical and Cultural Context
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    The marketplace served as a public square where children quickly improvised games based on the two most
-    significant social events of the time: weddings (with joyful flutes) and funerals (with mournful wails).
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    The marketplace served as a public square where children improvised games based on the two most significant
+    social events: weddings (with joyful flutes) and funerals (with mournful wails).
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
     The "playmates" in the parable represent God's messengers, while the children represent an unresponsive
     audience. Refusing to dance or mourn symbolizes a total lack of response to the spiritual message being
-    presented, indicating hearts intentionally out of sync with God's timing.
+    presented.
   </p>
 </section>
 
@@ -1068,19 +797,19 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Modern Application
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     A modern equivalent is an employee who criticizes every management style to avoid responsibility. If the
     manager is hands-on, they complain about micromanagement; if the manager gives freedom, they complain about
-    a lack of direction. The issue is not the style, but the employee's unwillingness to cooperate.
+    lack of direction.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    Similarly, a person may reject one church as "too traditional" and another as "too shallow," using
-    contradictions as excuses to avoid personally responding to the demands of the gospel.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    Similarly, someone may reject one church as too traditional and another as too shallow, using contradictions
+    as excuses to avoid personally responding to the demands of the gospel.
   </p>
 </section>
 `,
 
-    8: `
+        8: `
 <section class="mb-6">
   <p class="text-center text-sm md:text-base text-amber-700 font-dm-display">
     Parable 8 of 55 – The Sower
@@ -1124,16 +853,16 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Divine Interpretation
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     This parable illustrates four ways people receive the gospel. The sower is the one who proclaims God's Word,
-    and the seed is the message itself. The four soils represent the conditions of the human heart: the path is
-    a hardened heart that rejects the word; the rocky ground is a shallow heart that falls away under trial;
-    the thorny ground is a distracted heart overwhelmed by worries and wealth; and the good soil is a receptive
-    heart that understands, accepts, and bears abundant fruit.
+    and the seed is the message itself. The four soils represent the human heart: the path is a hardened heart
+    that rejects the word; the rocky ground is a shallow heart that falls away under trial; the thorny ground
+    is a distracted heart overwhelmed by worries and wealth; and the good soil is a receptive heart that
+    understands, accepts, and bears abundant fruit.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    The primary theological lesson is that the apparent effectiveness of God's word in a life depends greatly on
-    the spiritual receptivity and readiness of the listener.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    The main lesson is that the apparent effectiveness of God's word depends greatly on the spiritual
+    receptivity and readiness of the listener.
   </p>
 </section>
 
@@ -1141,15 +870,14 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Historical and Cultural Context
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    In the ancient Near East, farmers practiced broadcast sowing, throwing seeds by hand over the field before
-    plowing. The path referred to the hard-packed dirt tracks between fields used by travelers.
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    Ancient Near Eastern farmers practiced broadcast sowing, throwing seeds by hand before plowing. The path
+    referred to the hard-packed dirt tracks between fields used by travelers.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    The rocky ground was not simply soil with stones, but a thin layer of topsoil over a shelf of limestone,
-    which trapped heat and moisture, causing quick growth but preventing deep roots. A harvest of thirty,
-    sixty, or a hundred times what was sown was considered extraordinary, as a normal yield might be only seven
-    to ten times the seed.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    The rocky ground was a thin layer of topsoil over a limestone shelf, trapping heat and moisture for quick
+    growth but preventing deep roots. A harvest of thirty, sixty, or a hundred times what was sown was
+    considered extraordinary, since normal yields might be only seven to ten times.
   </p>
 </section>
 
@@ -1157,20 +885,20 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Modern Application
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    Consider four people hearing a podcast about integrity. The first ignores it while scrolling on a phone. The
-    second is inspired for a day but lies to their boss at the first sign of trouble. The third wants to change
-    but clings to deceptive business practices out of obsession with becoming rich. The fourth listens,
-    reflects, and begins making honest choices even when it costs money.
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    Consider four people hearing a message about integrity. One ignores it. Another is briefly inspired but
+    compromises at the first sign of pressure. A third wants to change but clings to deceptive practices out of
+    greed.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    Eventually this fourth person becomes a trusted leader whose character influences an entire company to
-    operate ethically. The difference is not in the message heard, but in the condition of the heart receiving it.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    The fourth reflects deeply and begins making honest choices, even when it is costly, eventually becoming a
+    trusted leader who influences others to live ethically. The difference is not in the message, but in the
+    heart that receives it.
   </p>
 </section>
 `,
 
-    9: `
+        9: `
 <section class="mb-6">
   <p class="text-center text-sm md:text-base text-amber-700 font-dm-display">
     Parable 9 of 55 – Lamp on a Stand
@@ -1209,16 +937,15 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Divine Interpretation
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    The primary theological significance of this parable is the revealing nature of God's kingdom. Jesus, the
-    light of the world, did not come to remain hidden but to be made known. The lamp represents gospel truth,
-    which is meant to shine openly, not be concealed.
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    This parable highlights the revealing nature of God's kingdom. Jesus, the light of the world, did not come
+    to remain hidden but to be made known. The lamp represents gospel truth, which is meant to shine openly,
+    not be concealed.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
     The teaching also emphasizes spiritual reciprocity: the degree to which a person listens to and obeys God's
-    Word determines their capacity to receive further revelation. "To have" is to possess a heart that acts on
-    the truth, leading to an abundance of spiritual insight; a closed or indifferent heart loses even the
-    understanding it once had.
+    Word determines their capacity to receive further revelation. A responsive heart gains more light; a closed
+    or indifferent heart loses even the understanding it once had.
   </p>
 </section>
 
@@ -1226,13 +953,13 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Historical and Cultural Context
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    In first-century homes, lamps were small clay vessels filled with oil and placed on stands to illuminate the
-    room. A "basket" (bushel) was a measuring container, and placing it over a lamp would both hide its light
-    and eventually smother the flame.
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    In first-century homes, lamps were small clay vessels filled with oil and set on stands to light the room.
+    A "basket" (bushel) was a measuring container; placing it over a lamp would both hide its light and
+    eventually extinguish the flame.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    The language of measuring reflects the marketplace, where grain was measured out fairly or unfairly.
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
+    The language of measuring reflects the marketplace, where grain could be measured fairly or unfairly.
     Jesus uses this imagery to describe how God responds to the measure of our responsiveness to His word.
   </p>
 </section>
@@ -1241,12 +968,12 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Modern Application
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
-    Imagine a talented software engineer who discovers a better way to protect user privacy. If they hide the
-    code out of fear, no one benefits and even their own growth stagnates. But if they share what they know and
+  <p class="text-base md:text-lg leading-relaxed font-serif">
+    Imagine a talented software engineer who discovers a better way to protect user privacy. If they hide their
+    work out of fear, no one benefits and even their own skills stagnate. But if they share what they know and
     apply it in their work, they gain collaborators, new ideas, and greater impact.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
     In the same way, when a person experiences God's peace but hides their faith to avoid discomfort, their own
     sense of purpose can fade. The more they openly live out their values and share their hope, the more their
     own understanding and joy increase.
@@ -1254,7 +981,7 @@ Step 2 – Replace your whole const parables = { ... } with this
 </section>
 `,
 
-    10: `
+        10: `
 <section class="mb-6">
   <p class="text-center text-sm md:text-base text-amber-700 font-dm-display">
     Parable 10 of 55 – The Growing Seed
@@ -1288,12 +1015,12 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Divine Interpretation
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     This parable emphasizes the steady and mysterious power of God's Word. It teaches that while humans are
     responsible for sowing the seed, the actual spiritual transformation and growth are entirely the work of
     God.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
     This growth happens according to a divine timeline that is independent of human effort or observation,
     teaching believers to trust God's faithfulness and the inherent vitality of His kingdom rather than their
     own cleverness or constant monitoring.
@@ -1304,15 +1031,14 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Historical and Cultural Context
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     The phrase "the earth produces by itself" uses the Greek word <em>automate</em>, from which we get "automatic."
     In the ancient context, this highlighted the mysterious nature of life: farmers understood planting and
     harvesting, but the inner process of growth was seen as a wonder of God's world.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
     The sickle and harvest are traditional biblical symbols for the end of the age and the final gathering of
-    the faithful, signaling that God's work in a soul and in history will reach a planned and complete
-    conclusion.
+    the faithful, signaling that God's work will reach a planned and complete conclusion.
   </p>
 </section>
 
@@ -1320,11 +1046,11 @@ Step 2 – Replace your whole const parables = { ... } with this
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Modern Application
   </h3>
-  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed font-serif">
     Consider a person who volunteers at a community center teaching literacy. They spend months reading with
     students, often feeling like there is little progress. After the program ends, they lose contact.
   </p>
-  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
+  <p class="text-base md:text-lg leading-relaxed mt-3 font-serif">
     Years later, they discover that one of those students graduated college and became a writer. The volunteer
     sowed the initial seed, but the internal growth and eventual fruit unfolded beyond their sight and control.
     In the same way, we can trust that God is at work even when we cannot immediately see the results.
@@ -1332,40 +1058,39 @@ Step 2 – Replace your whole const parables = { ... } with this
 </section>
 `,
 
-    // Keep the rest as placeholders for now
-    11: `<p class="text-center text-amber-700">Parable 11 content coming soon.</p>`,
-    12: `<p class="text-center text-amber-700">Parable 12 content coming soon.</p>`,
-    18: `<p class="text-center text-amber-700">Parable 18 content coming soon.</p>`,
-    19: `<p class="text-center text-amber-700">Parable 19 content coming soon.</p>`,
-    20: `<p class="text-center text-amber-700">Parable 20 content coming soon.</p>`,
-    23: `<p class="text-center text-amber-700">Parable 23 content coming soon.</p>`,
-  };
+        11: `<p class="text-center text-amber-700">Parable 11 content coming soon.</p>`,
+        12: `<p class="text-center text-amber-700">Parable 12 content coming soon.</p>`,
+        18: `<p class="text-center text-amber-700">Parable 18 content coming soon.</p>`,
+        19: `<p class="text-center text-amber-700">Parable 19 content coming soon.</p>`,
+        20: `<p class="text-center text-amber-700">Parable 20 content coming soon.</p>`,
+        23: `<p class="text-center text-amber-700">Parable 23 content coming soon.</p>`,
+      };
 
-  const contentDiv = document.getElementById("parable-content");
-  const items = document.querySelectorAll(".parable-item");
-  const counter = document.getElementById("parable-counter");
+      const contentDiv = document.getElementById("parable-content");
+      const items = document.querySelectorAll(".parable-item");
+      const counter = document.getElementById("parable-counter");
 
-  function showParable(number) {
-    const html = parables[number];
-    if (!html) return;
-    contentDiv.innerHTML = html;
-    if (counter) {
-      counter.textContent = `${number} of 55 · Gospel overview`;
-    }
-  }
+      function showParable(number) {
+        const html = parables[number];
+        if (!html) return;
+        contentDiv.innerHTML = html;
+        if (counter) {
+          counter.textContent = `${number} of 55 · Gospel overview`;
+        }
+      }
 
-  items.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const num = parseInt(btn.getAttribute("data-parable"), 10);
-      showParable(num);
+      items.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const num = parseInt(btn.getAttribute("data-parable"), 10);
+          showParable(num);
 
-      items.forEach((b) => b.classList.remove("bg-slate-800", "border-slate-700"));
-      btn.classList.add("bg-slate-800", "border-slate-700");
-    });
-  });
+          items.forEach((b) => b.classList.remove("bg-slate-800", "border-slate-700"));
+          btn.classList.add("bg-slate-800", "border-slate-700");
+        });
+      });
 
-  // Show Parable 1 on first load
-  showParable(1);
-</script>
-</body>
-  </html>
+      // Show Parable 1 on first load
+      showParable(1);
+    </script>
+  </body>
+</html>
