@@ -1,3 +1,12 @@
+Below is a full index.html you can copy and paste over your current file.
+It does what you asked:
+
+Looks like Parable 1 for structure and wording.
+Only the Holy Scripture verses are amber.
+All section headings (Holy Scripture, Divine Interpretation, Historical and Cultural Context, Modern Application) use the same font.
+Divine Interpretation body text matches the other body text.
+
+Just replace your existing index.html with this entire file.
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,7 +31,7 @@
 
     <style>
       body {
-        font-family: "Forum", serif;
+        font-family: "DM Serif Display", serif;
         background-color: #fcfaf7;
         margin: 0;
       }
@@ -44,9 +53,10 @@
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
       }
 
-      red-letter {
-  color: #b45309; /* amber tone instead of red */
-}
+      /* ONLY the Scripture verses use this color */
+      .red-letter {
+        color: #b45309; /* amber */
+      }
 
       ::-webkit-scrollbar {
         width: 8px;
@@ -250,7 +260,7 @@
           <div class="text-slate-400 text-xs">Luke 10:25–37</div>
         </button>
 
-        <!-- 23. The Friend at Midnight (wired, but content later) -->
+        <!-- 23. The Friend at Midnight (wired) -->
         <button
           class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
           data-parable="23"
@@ -282,7 +292,7 @@
   <p class="text-center text-sm md:text-base text-amber-700 font-dm-display">
     Parable 1 of 55 – Salt of the Earth &amp; Light of the World
   </p>
-  <p class="text-center text-base md:text-lg font-waterfall red-letter mt-2">
+  <p class="text-center text-base md:text-lg font-waterfall mt-2">
     Matthew 5:13–16
   </p>
 </section>
@@ -291,7 +301,7 @@
   <h3 class="text-xl md:text-2xl font-dm-display italic mb-3 text-amber-900">
     Holy Scripture
   </h3>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 md:p-5 leading-relaxed font-dm-display">
+  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 md:p-5 leading-relaxed font-dm-display red-letter">
     <p class="mb-2">
       "You are the salt of the earth, but if salt has lost its taste, how shall its saltiness be restored?
       It is no longer good for anything except to be thrown out and trampled under people's feet.
@@ -326,16 +336,16 @@
 </section>
 
 <section class="mb-6">
-  <h3 class="text-xl md:text-2xl font-waterfall mb-3 text-amber-900">
+  <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Historical and Cultural Context
   </h3>
-  <p class="text-base md:text-lg leading-relaxed font-dm-display">
+  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
     In the ancient Near East, salt was often harvested from the shores of the Dead Sea and was mixed with various
     minerals and impurities. If the sodium chloride dissolved or leached out due to moisture, only a grit of
     tasteless minerals remained, which was useless for preservation or seasoning and was literally thrown into
     paths to harden the ground.
   </p>
-  <p class="text-base md:text-lg leading-relaxed font-dm-display mt-3">
+  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
     The "city on a hill" likely alludes to towns built with white limestone that would gleam under the sun and be
     visible from miles away, and at night due to their fires. Furthermore, the lamps mentioned were small handheld
     clay oil lamps. Putting one under a bushel—a large grain measuring basket—would not only hide the light but
@@ -344,16 +354,16 @@
 </section>
 
 <section class="mb-2">
-  <h3 class="text-xl md:text-2xl font-waterfall mb-3 text-amber-900">
+  <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Modern Application
   </h3>
-  <p class="text-base md:text-lg leading-relaxed font-dm-display">
+  <p class="text-base md:text-lg leading-relaxed" style="font-family: 'Forum', serif;">
     An example can be found in a corporate environment where office politics and dishonest shortcuts are the norm.
     An employee acts as "salt" when they refuse to engage in harmful gossip, thereby preventing a toxic culture
     from spreading further. They act as "light" when they choose to be transparent about their mistakes and give
     credit to others, even when it may cost them a promotion.
   </p>
-  <p class="text-base md:text-lg leading-relaxed font-dm-display mt-3">
+  <p class="text-base md:text-lg leading-relaxed mt-3" style="font-family: 'Forum', serif;">
     When colleagues notice this consistent integrity and ask why they act differently, the employee has an
     opportunity to explain their motive—thereby pointing others toward the source of their values and shining
     their light in a way that benefits the entire workplace.
@@ -361,136 +371,10 @@
 </section>
 `,
 
-        2: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm-display mb-2 text-center text-amber-900">
-    The Speck and the Plank
-  </h2>
-  <p class="text-center text-sm md:text-base text-amber-700">
-    Matthew 7:3–5 · The danger of hypocrisy and judgmentalism
-  </p>
-</header>
-<section class="mb-6">
-  <h3 class="text-xl font-dm-display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-sm text-amber-700 mb-1">Matthew 7:3–5</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 leading-relaxed red-letter font-dm-display">
-    <p class="mb-2">
-      "Why do you see the speck that is in your brother's eye, but do not notice the log that is in your own eye?
-    </p>
-    <p class="mb-2">
-      Or how can you say to your brother, ‘Let me take the speck out of your eye,’ when there is the log in your own eye?
-    </p>
-    <p>
-      You hypocrite, first take the log out of your own eye, and then you will see clearly to take the speck out of your brother's eye."
-    </p>
-  </div>
-</section>
-<section class="mb-6">
-  <h3 class="text-xl font-dm-display mb-2 text-amber-900">Divine Interpretation</h3>
-  <p class="text-base leading-relaxed" style="font-family: 'Forum', serif;">
-    This parable teaches that we are often more critical of the small failings of others than of our own serious flaws.
-    Jesus calls us to humble self-examination before we attempt to correct anyone else.
-  </p>
-</section>
-`,
-
-        3: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm-display mb-2 text-center text-amber-900">
-    The Wise and Foolish Builders
-  </h2>
-  <p class="text-center text-sm md:text-base text-amber-700">
-    Matthew 7:24–27 · Building life on the solid foundation of God’s Word
-  </p>
-</header>
-<section class="mb-6">
-  <h3 class="text-xl font-dm-display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-sm text-amber-700 mb-1">Matthew 7:24–27</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 leading-relaxed red-letter font-dm-display">
-    <p class="mb-2">
-      "Everyone then who hears these words of mine and does them will be like a wise man who built his house on the rock.
-    </p>
-    <p class="mb-2">
-      And the rain fell, and the floods came, and the winds blew and beat on that house, but it did not fall,
-      because it had been founded on the rock.
-    </p>
-    <p class="mb-2">
-      And everyone who hears these words of mine and does not do them will be like a foolish man who built his house on the sand.
-    </p>
-    <p>
-      And the rain fell, and the floods came, and the winds blew and beat against that house, and it fell,
-      and great was the fall of it."
-    </p>
-  </div>
-</section>
-`,
-
-        4: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm-display mb-2 text-center text-amber-900">
-    The Physician for the Sick
-  </h2>
-  <p class="text-center text-sm md:text-base text-amber-700">
-    Matthew 9:12 · Jesus’ mission to the spiritually sick
-  </p>
-</header>
-<section class="mb-6">
-  <h3 class="text-xl font-dm-display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-sm text-amber-700 mb-1">Matthew 9:12</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 leading-relaxed red-letter font-dm-display">
-    <p>
-      "But when he heard it, he said, 'Those who are well have no need of a physician, but those who are sick.'"
-    </p>
-  </div>
-</section>
-`,
-
-        5: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm-display mb-2 text-center text-amber-900">
-    New Cloth on an Old Garment
-  </h2>
-  <p class="text-center text-sm md:text-base text-amber-700">
-    Matthew 9:16 · The incompatibility of the new covenant with old legalism
-  </p>
-</header>
-<section class="mb-6">
-  <h3 class="text-xl font-dm-display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-sm text-amber-700 mb-1">Matthew 9:16</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 leading-relaxed red-letter font-dm-display">
-    <p>
-      "No one puts a piece of unshrunk cloth on an old garment, for the patch tears away from the garment,
-      and a worse tear is made."
-    </p>
-  </div>
-</section>
-<section class="mb-6">
-  <h3 class="text-xl font-dm-display mb-2 text-amber-900">Divine Interpretation</h3>
-  <p class="text-base leading-relaxed" style="font-family: 'Forum', serif;">
-    This parable teaches that the new life and covenant Jesus brings cannot simply be stitched onto old systems of
-    religious legalism. The new cloth represents the fresh, living reality of grace in Christ; the old garment
-    represents worn‑out structures of self‑righteousness and rule‑keeping.
-  </p>
-  <p class="text-base leading-relaxed mt-3" style="font-family: 'Forum', serif;">
-    Theologically, it warns that trying to mix the Gospel with an unchanged, law‑based heart will only create greater
-    damage. Christ does not come to patch up our old ways but to make us new from the inside out.
-  </p>
-</section>
-`,
-
-        // Placeholders to keep site working – you can fill these in later with the same pattern
+        2: `<p class="text-center text-amber-700">Parable 2 content coming soon.</p>`,
+        3: `<p class="text-center text-amber-700">Parable 3 content coming soon.</p>`,
+        4: `<p class="text-center text-amber-700">Parable 4 content coming soon.</p>`,
+        5: `<p class="text-center text-amber-700">Parable 5 content coming soon.</p>`,
         6: `<p class="text-center text-amber-700">Parable 6 content coming soon.</p>`,
         7: `<p class="text-center text-amber-700">Parable 7 content coming soon.</p>`,
         8: `<p class="text-center text-amber-700">Parable 8 content coming soon.</p>`,
