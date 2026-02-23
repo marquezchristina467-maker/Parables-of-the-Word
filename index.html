@@ -22,828 +22,6 @@
 
     <style>
       body {
-        font-family: "DM Serif Display", serif;
-        background-color: #fcfaf7;
-        margin: 0;
-      }
-      .font-serif {
-        font-family: "Forum", serif;
-      }
-      .parchment {
-        background: linear-gradient(to bottom right, #ffffff, #f7f2ea);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
-      }
-      .red-letter {
-        color: #b91c1c;
-      }
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #f3f4f6;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #d1d5db;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #9ca3af;
-      }
-    </style>
-  </head>
-  <body class="min-h-screen flex items-stretch">
-    <!-- Left column: list of parables (book index) -->
-    <aside
-      class="w-full md:w-1/3 lg:w-1/4 bg-slate-900 text-slate-100 p-4 md:p-6 flex flex-col gap-4"
-    >
-      <header class="border-b border-sherif-700 pb-3 mb-2">
-        <h1 class="font-dm sherif display text 2xl">Parables of the Word</h1>
-        <p class="text-regular text-slate-300 mt-1">
-          A chronological journey through 55 parables and parabolic teachings of Jesus.
-        </p>
-        <p class="text-regular text-slate-400 mt-1" id="parable-counter">
-          1 of 55 · Gospel overview
-        </p>
-      </header>
-
-      <div class="text-regular uppercase tracking-wide text-slate-400 mb-1">
-        Parables (chronological)
-      </div>
-
-      <nav class="flex-1 overflow-y-auto space-y-1 text-sm">
-        <!-- 1–4 wired -->
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 parable-item"
-          data-parable="1"
-        >
-          <div class="text-slate-100 font-dm sherif display">
-            1. Salt of the Earth &amp; Light of the World
-          </div>
-          <div class="text-slate-400 text-regular">Matthew 5:13–16</div>
-        </button>
-
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="2"
-        >
-          <div class="text-slate-100">2. The Speck and the Plank</div>
-          <div class="text-slate-400 text-regular">Matthew 7:3–5</div>
-        </button>
-
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="3"
-        >
-          <div class="text-slate-100">3. The Wise and Foolish Builders</div>
-          <div class="text-slate-400 text-regular">Matthew 7:24–27</div>
-        </button>
-
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="4"
-        >
-          <div class="text-slate-100">4. The Physician for the Sick</div>
-          <div class="text-slate-400 text-regular">Matthew 9:12</div>
-        </button>
-
-        <!-- 5–12 wired -->
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="5"
-        >
-          <div class="text-slate-100">5. New Cloth on an Old Garment</div>
-          <div class="text-slate-400 text-regular">Matthew 9:16</div>
-        </button>
-
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="6"
-        >
-          <div class="text-slate-100">6. New Wine in Old Wineskins</div>
-          <div class="text-slate-400 text-xs">Matthew 9:17</div>
-        </button>
-
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="7"
-        >
-          <div class="text-slate-100">7. Children in the Marketplace</div>
-          <div class="text-slate-400 text-regular">Matthew 11:16–19</div>
-        </button>
-
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="8"
-        >
-          <div class="text-slate-100">8. The Sower</div>
-          <div class="text-slate-400 text-regular">Matthew 13:3–9</div>
-        </button>
-
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="9"
-        >
-          <div class="text-slate-100">9. Lamp on a Stand</div>
-          <div class="text-slate-400 text-regular">Mark 4:21–25</div>
-        </button>
-
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="10"
-        >
-          <div class="text-slate-100">10. The Growing Seed</div>
-          <div class="text-slate-400 text-regular">Mark 4:26–29</div>
-        </button>
-
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="11"
-        >
-          <div class="text-slate-100">11. The Mustard Seed</div>
-          <div class="text-slate-400 text-regular">Matthew 13:31–32</div>
-        </button>
-
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="12"
-        >
-          <div class="text-slate-100">12. The Yeast / Leaven</div>
-          <div class="text-slate-400 text-regular">Matthew 13:33</div>
-        </button>
-
-        <!-- 13–17 listed only for now -->
-        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
-          <div class="text-slate-100">13. The Weeds and the Wheat</div>
-          <div class="text-slate-400 text-regular">Matthew 13:24–30</div>
-        </button>
-
-        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
-          <div class="text-slate-100">14. The Hidden Treasure</div>
-          <div class="text-slate-400 text-regular">Matthew 13:44</div>
-        </button>
-
-        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
-          <div class="text-slate-100">15. The Pearl of Great Price</div>
-          <div class="text-slate-400 text-regular">Matthew 13:45–46</div>
-        </button>
-
-        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
-          <div class="text-slate-100">16. The Net</div>
-          <div class="text-slate-400 text-regular">Matthew 13:47–50</div>
-        </button>
-
-        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
-          <div class="text-slate-100">17. The Scribe as Householder</div>
-          <div class="text-slate-400 text-regular">Matthew 13:52</div>
-        </button>
-
-        <!-- 18. The Two Debtors -->
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="18"
-        >
-          <div class="text-slate-100">18. The Two Debtors</div>
-          <div class="text-slate-400 text-regular">Luke 7:41–43</div>
-        </button>
-
-        <!-- 19. The Strong Man -->
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="19"
-        >
-          <div class="text-slate-100">19. The Strong Man</div>
-          <div class="text-slate-400 text-regular">Matthew 12:29</div>
-        </button>
-
-        <!-- 20. Return of the Unclean Spirit -->
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="20"
-        >
-          <div class="text-slate-100">20. Return of the Unclean Spirit</div>
-          <div class="text-slate-400 text-regular">Matthew 12:43–45</div>
-        </button>
-
-        <!-- 21–22 listed only -->
-        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
-          <div class="text-slate-100">21. The Unforgiving Servant</div>
-          <div class="text-slate-400 text-regular">Matthew 18:23–35</div>
-        </button>
-        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80">
-          <div class="text-slate-100">22. The Good Samaritan</div>
-          <div class="text-slate-400 text-regular">Luke 10:25–37</div>
-        </button>
-
-        <!-- 23. The Friend at Midnight (wired, but you’ll add its content later) -->
-        <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-800/80 parable-item"
-          data-parable="23"
-        >
-          <div class="text-slate-100">23. The Friend at Midnight</div>
-          <div class="text-slate-400 text-regular">Luke 11:5–8</div>
-        </button>
-      </nav>
-    </aside>
-
-    <!-- Right column: dynamic detail view -->
-    <main class="flex-1 p-4 md:p-8 flex justify-center overflow-y-auto">
-      <div class="parchment w-full max-w-4xl mx-auto p-6 md:p-8 rounded-xl">
-        <div id="parable-content"></div>
-      </div>
-    </main>
-
-    <script>
-      const parables = {
-        1: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif display mb-2 text-center text-amber-900">
-    Salt of the Earth &amp; Light of the World
-  </h2>
-  <p class="text-center text-sm md:text-base text-amber-700">
-    Matthew 5:13–16 · First parable in the sequence
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-regular text-amber-700 mb-1">Matthew 5:13–16</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-regular leading-relaxed red-letter">
-    <p class="mb-2">
-      "You are the salt of the earth, but if salt has lost its taste, how shall its saltiness be restored? It is
-      no longer good for anything except to be thrown out and trampled under people's feet.
-    </p>
-    <p class="mb-2">
-      You are the light of the world. A city set on a hill cannot be hidden. Nor do people light a lamp and put
-      it under a basket, but on a stand, and it gives light to all in the house.
-    </p>
-    <p>
-      In the same way, let your light shine before others, so that they may see your good works and give glory
-      to your Father who is in heaven."
-    </p>
-  </div>
-</section>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 text-amber-900">Divine Interpretation</h3>
-  <p class="text-regular md:text-base text-slate-800 leading-relaxed">
-    This teaching highlights the central influence believers must have in the world. Salt serves as both a
-    preservative—slowing moral decay—and a seasoning, bringing out what is good. Light represents the truth of
-    God and the clarity of a life lived in line with His will. Together, these images call followers of Christ
-    to be distinct from their surrounding culture while remaining deeply engaged in it.
-  </p>
-  <p class="text-sm md:text-base text-slate-800 leading-relaxed mt-3">
-    The purpose is not withdrawal from the world, but visible, faithful presence within it, so that others can
-    recognize God’s character through our conduct.
-  </p>
-</section>
-`,
-
-        2: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif display mb-2 text-center text-amber-900">
-    The Speck and the Plank
-  </h2>
-  <p class="text-center text-regular md:text-base text-amber-700">
-    Matthew 7:3–5 · The danger of hypocrisy and judgmentalism
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-regular text-amber-700 mb-1">Matthew 7:3–5</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-regular leading-relaxed red-letter">
-    <p class="mb-2">
-      "Why do you see the speck that is in your brother's eye, but do not notice the log that is in your own
-      eye?
-    </p>
-    <p class="mb-2">
-      Or how can you say to your brother, ‘Let me take the speck out of your eye,’ when there is the log in your
-      own eye?
-    </p>
-    <p>
-      You hypocrite, first take the log out of your own eye, and then you will see clearly to take the speck out
-      of your brother's eye."
-    </p>
-  </div>
-</section>
-
-<section class="mb-6">
-  <h3 class="text-xl font-serif mb-2 text-amber-900">Divine Interpretation</h3>
-  <p class="text-sm md:text-base text-slate-800 leading-relaxed">
-    This parable teaches that we are often more critical of the small failings of others than of our own serious
-    flaws. Jesus calls us to humble self-examination before we attempt to correct anyone else.
-  </p>
-</section>
-`,
-
-        3: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif display mb-2 text-center text-amber-900">
-    The Wise and Foolish Builders
-  </h2>
-  <p class="text-center text-regular md:text-base text-amber-700">
-    Matthew 7:24–27 · Building life on the solid foundation of God’s Word
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font-serif mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-regular text-amber-700 mb-1">Matthew 7:24–27</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-regular leading-relaxed red-letter">
-    <p class="mb-2">
-      "Everyone then who hears these words of mine and does them will be like a wise man who built his house on
-      the rock.
-    </p>
-    <p class="mb-2">
-      And the rain fell, and the floods came, and the winds blew and beat on that house, but it did not fall,
-      because it had been founded on the rock.
-    </p>
-    <p class="mb-2">
-      And everyone who hears these words of mine and does not do them will be like a foolish man who built his
-      house on the sand.
-    </p>
-    <p>
-      And the rain fell, and the floods came, and the winds blew and beat against that house, and it fell, and
-      great was the fall of it."
-    </p>
-  </div>
-</section>
-`,
-
-        4: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif display mb-2 text-center text-amber-900">
-    The Physician for the Sick
-  </h2>
-  <p class="text-center text-regular md:text-base text-amber-700">
-    Matthew 9:12 · Jesus’ mission to the spiritually sick
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-sm text-amber-700 mb-1">Matthew 9:12</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-regular leading-relaxed red-letter">
-    <p>
-      "But when he heard it, he said, 'Those who are well have no need of a physician, but those who are sick.'"
-    </p>
-  </div>
-</section>
-`,
-
-        5: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif display mb-2 text-center text-amber-900">
-    New Cloth on an Old Garment
-  </h2>
-  <p class="text-center text-sm md:text-base text-amber-700">
-    Matthew 9:16 · The incompatibility of the new covenant with old legalism
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-regular text-amber-700 mb-1">Matthew 9:16</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-regular leading-relaxed red-letter">
-    <p>
-      "No one puts a piece of unshrunk cloth on an old garment, for the patch tears away from the garment, and a worse
-      tear is made."
-    </p>
-  </div>
-</section>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 text-amber-900">Divine Interpretation</h3>
-  <p class="text-sm md:text-base text-slate-800 leading-relaxed">
-    This parable teaches that the new life and covenant Jesus brings cannot simply be stitched onto old systems of
-    religious legalism. The new cloth represents the fresh, living reality of grace in Christ; the old garment
-    represents worn‑out structures of self‑righteousness and rule‑keeping.
-  </p>
-  <p class="text-regular md:text-base text-slate-800 leading-relaxed mt-3">
-    Theologically, it warns that trying to mix the Gospel with an unchanged, law‑based heart will only create greater
-    damage. Christ does not come to patch up our old ways but to make us new from the inside out.
-  </p>
-</section>
-`,
-
-        6: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif display mb-2 text-center text-amber-900">
-    New Wine in Old Wineskins
-  </h2>
-  <p class="text-center text-regular md:text-base text-amber-700">
-    Matthew 9:17 · The new covenant cannot be contained in old religious structures
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-regular text-amber-700 mb-1">Matthew 9:17</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-regular leading-relaxed red-letter">
-    <p>
-      "Neither is new wine put into old wineskins. If it is, the skins burst and the wine is spilled and the skins
-      are destroyed. But new wine is put into fresh wineskins, and so both are preserved."
-    </p>
-  </div>
-</section>
-`,
-
-        7: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif display mb-2 text-center text-amber-900">
-    Children in the Marketplace
-  </h2>
-  <p class="text-center text-regular md:text-base text-amber-700">
-    Matthew 11:16–19 · A generation that refuses every call of God
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-regular text-amber-700 mb-1">Matthew 11:16–19</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-regular leading-relaxed red-letter">
-    <p class="mb-2">
-      "But to what shall I compare this generation? It is like children sitting in the marketplaces and calling to
-      their playmates,
-    </p>
-    <p class="mb-2">
-      ‘We played the flute for you, and you did not dance; we sang a dirge, and you did not mourn.’
-    </p>
-    <p class="mb-2">
-      For John came neither eating nor drinking, and they say, ‘He has a demon.’
-    </p>
-    <p class="mb-2">
-      The Son of Man came eating and drinking, and they say, ‘Look at him! A glutton and a drunkard, a friend of tax
-      collectors and sinners!’
-    </p>
-    <p>
-      Yet wisdom is justified by her deeds."
-    </p>
-  </div>
-</section>
-`,
-
-        8: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif display mb-2 text-center text-amber-900">
-    The Sower
-  </h2>
-  <p class="text-center text-regular md:text-base text-amber-700">
-    Matthew 13:3–9 · How the heart receives the Word of God
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-regular text-amber-700 mb-1">Matthew 13:3–9</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-regular leading-relaxed red-letter">
-    <p class="mb-2">
-      "And he told them many things in parables, saying: 'A sower went out to sow.
-    </p>
-    <p class="mb-2">
-      And as he sowed, some seeds fell along the path, and the birds came and devoured them.
-    </p>
-    <p class="mb-2">
-      Other seeds fell on rocky ground, where they did not have much soil, and immediately they sprang up, since they
-      had no depth of soil,
-    </p>
-    <p class="mb-2">
-      but when the sun rose they were scorched. And since they had no root, they withered away.
-    </p>
-    <p class="mb-2">
-      Other seeds fell among thorns, and the thorns grew up and choked them.
-    </p>
-    <p class="mb-2">
-      Other seeds fell on good soil and produced grain, some a hundredfold, some sixty, some thirty.
-    </p>
-    <p>
-      He who has ears, let him hear.'"
-    </p>
-  </div>
-</section>
-`,
-
-        9: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif display mb-2 text-center text-amber-900">
-    Lamp on a Stand
-  </h2>
-  <p class="text-center text-regular md:text-base text-amber-700">
-    Mark 4:21–25 · Letting God’s truth shine openly
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font- dm serif display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-regular text-amber-700 mb-1">Mark 4:21–25</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-regular leading-relaxed red-letter">
-    <p class="mb-2">
-      "And he said to them, 'Is a lamp brought in to be put under a basket, or under a bed, and not on a stand?
-    </p>
-    <p class="mb-2">
-      For nothing is hidden except to be made manifest; nor is anything secret except to come to light.
-    </p>
-    <p class="mb-2">
-      If anyone has ears to hear, let him hear.'
-    </p>
-    <p class="mb-2">
-      And he said to them, 'Pay attention to what you hear: with the measure you use, it will be measured to you,
-      and still more will be added to you.
-    </p>
-    <p>
-      For to the one who has, more will be given, and from the one who has not, even what he has will be taken away.'"
-    </p>
-  </div>
-</section>
-`,
-
-        10: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif display mb-2 text-center text-amber-900">
-    The Growing Seed
-  </h2>
-  <p class="text-center text-regular md:text-base text-amber-700">
-    Mark 4:26–29 · The mysterious, unstoppable growth of God’s Kingdom
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-rg text-amber-700 mb-1">Mark 4:26–29</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-rg leading-relaxed red-letter">
-    <p class="mb-2">
-      "And he said, 'The kingdom of God is as if a man should scatter seed on the ground.
-    </p>
-    <p class="mb-2">
-      He sleeps and rises night and day, and the seed sprouts and grows; he knows not how.
-    </p>
-    <p class="mb-2">
-      The earth produces by itself, first the blade, then the ear, then the full grain in the ear.
-    </p>
-    <p>
-      But when the grain is ripe, at once he puts in the sickle, because the harvest has come.'"
-    </p>
-  </div>
-</section>
-`,
-
-        11: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif display mb-2 text-center text-amber-900">
-    The Mustard Seed
-  </h2>
-  <p class="text-center text-rg md:text-base text-amber-700">
-    Matthew 13:31–32 · The surprising growth of God’s Kingdom from tiny beginnings
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-rg text-amber-700 mb-1">Matthew 13:31–32</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-rg leading-relaxed red-letter">
-    <p class="mb-2">
-      "He put another parable before them, saying, 'The kingdom of heaven is like a grain of mustard seed that a man
-      took and sowed in his field.
-    </p>
-    <p class="mb-2">
-      It is the smallest of all seeds, but when it has grown it is larger than all the garden plants and becomes a
-      tree,
-    </p>
-    <p>
-      so that the birds of the air come and make nests in its branches.'"
-    </p>
-  </div>
-</section>
-`,
-
-        12: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif display mb-2 text-center text-amber-900">
-    The Yeast / Leaven
-  </h2>
-  <p class="text-center text-rg md:text-base text-amber-700">
-    Matthew 13:33 · The quiet, pervasive power of God’s Kingdom
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-rg text-amber-700 mb-1">Matthew 13:33</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-rg leading-relaxed red-letter">
-    <p>
-      "He told them another parable. 'The kingdom of heaven is like leaven that a woman took and hid in three
-      measures of flour, till it was all leavened.'"
-    </p>
-  </div>
-</section>
-`,
-
-        18: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif disply mb-2 text-center text-amber-900">
-    The Two Debtors
-  </h2>
-  <p class="text-center text-rg md:text-base text-amber-700">
-    Luke 7:41–43 · Forgiven much, loving much
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-rg text-amber-700 mb-1">Luke 7:41–43</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-rg leading-relaxed red-letter">
-    <p class="mb-2">
-      "A certain moneylender had two debtors. One owed five hundred denarii, and the other fifty.
-    </p>
-    <p class="mb-2">
-      When they could not pay, he cancelled the debt of both. Now which of them will love him more?"
-    </p>
-    <p class="mb-2">
-      Simon answered, "The one, I suppose, for whom he cancelled the larger debt." And he said to him,
-    </p>
-    <p>
-      "You have judged rightly.""
-    </p>
-  </div>
-</section>
-`,
-
-        19: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif display mb-2 text-center text-amber-900">
-    The Strong Man
-  </h2>
-  <p class="text-center text-rg md:text-base text-amber-700">
-    Matthew 12:29 · Christ, the stronger One who sets captives free
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-rg text-amber-700 mb-1">Matthew 12:29</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-rg leading-relaxed red-letter">
-    <p>
-      "Or how can someone enter a strong man’s house and plunder his goods, unless he first binds the strong man? Then
-      indeed he may plunder his house."
-    </p>
-  </div>
-</section>
-`,
-
-        20: `
-<header class="border-b border-amber-200 pb-4 mb-6">
-  <h2 class="text-3xl md:text-4xl font-dm serif display mb-2 text-center text-amber-900">
-    Return of the Unclean Spirit
-  </h2>
-  <p class="text-center text-rg md:text-base text-amber-700">
-    Matthew 12:43–45 · The danger of an “empty” life
-  </p>
-</header>
-
-<section class="mb-6">
-  <h3 class="text-xl font-dm serif display mb-2 flex items-center gap-2 text-amber-900">
-    <span class="inline-block w-1.5 h-6 bg-amber-500 rounded-full"></span>
-    Holy Scripture (ESV-style)
-  </h3>
-  <p class="text-rg text-amber-700 mb-1">Matthew 12:43–45</p>
-  <div class="bg-white/80 border border-amber-100 rounded-lg p-4 text-rg leading-relaxed red-letter">
-    <p class="mb-2">
-      "When the unclean spirit has gone out of a person, it passes through waterless places seeking rest, but finds
-      none.
-    </p>
-    <p class="mb-2">
-      Then it says, ‘I will return to my house from which I came.’ And when it comes, it finds the house empty,
-      swept, and put in order.
-    </p>
-    <p class="mb-2">
-      Then it goes and brings with it seven other spirits more evil than itself, and they enter and dwell there, and
-      the last state of that person is worse than the first.
-    </p>
-    <p>
-      So also will it be with this evil generation."
-    </p>
-  </div>
-</section>
-`,
-      };
-
-      const contentDiv = document.getElementById("parable-content");
-      const items = document.querySelectorAll(".parable-item");
-      const counter = document.getElementById("parable-counter");
-
-      function showParable(number) {
-        const html = parables[number];
-        if (!html) return;
-        contentDiv.innerHTML = html;
-        if (counter) {
-          counter.textContent = `${number} of 55 · Gospel overview`;
-        }
-      }
-
-      items.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const num = parseInt(btn.getAttribute("data-parable"), 10);
-          showParable(num);
-
-          items.forEach((b) =>
-            b.classList.remove("bg-slate-800", "border-slate-700")
-          );
-          btn.classList.add("bg-slate-800", "border-slate-700");
-        });
-      });
-
-      // Show Parable 1 on first load
-      showParable(1);
-    </script>
-  </body>
-</html>
-You’re doing great getting this into shape. Let’s fix Parable 1 exactly how you described, and adjust the fonts.
-
-Below is a replacement for your whole index.html that:
-
-Keeps “Parables of the Word” as the main heading on the right side.
-For Parable 1, shows:
-Title: Parable 1 of 55 – Salt of the Earth & Light of the World
-Scripture title: Holy Scripture
-Scripture body (the verses)
-Divine Interpretation (your paragraph, cleaned up)
-Historical and Cultural Context
-Modern Application
-Uses the fonts you requested:
-DM Serif Display (this is what you mean by DM Display)
-Waterfall
-Forum for some body text
-Applies the same structure you want to reuse for every parable later.
-What you need to do: In GitHub, edit index.html, delete everything, and paste this entire file in.
-
-
-New index.html (copy & paste this over your existing file)
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parables of the Word</title>
-
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=DM+Serif+Display:ital@0;1&family=Fleur+De+Leah&family=Forum&family=Rochester&family=Style+Script&family=Waterfall&display=swap"
-      rel="stylesheet"
-    />
-
-    <style>
-      body {
         font-family: "Forum", serif;
         background-color: #fcfaf7;
         margin: 0;
@@ -894,7 +72,6 @@ New index.html (copy & paste this over your existing file)
       class="w-full md:w-1/3 lg:w-1/4 bg-slate-900 text-slate-100 p-4 md:p-6 flex flex-col gap-4"
     >
       <header class="border-b border-slate-700 pb-3 mb-2">
-        <!-- LEFT side heading is fine to stay the same font -->
         <h1 class="text-2xl font-dm-display">Parables of the Word</h1>
         <p class="text-sm text-slate-300 mt-1">
           A chronological journey through 55 parables and parabolic teachings of Jesus.
@@ -1087,7 +264,7 @@ New index.html (copy & paste this over your existing file)
     <!-- Right column: dynamic detail view -->
     <main class="flex-1 p-4 md:p-8 flex justify-center overflow-y-auto">
       <div class="parchment w-full max-w-4xl mx-auto p-6 md:p-8 rounded-xl">
-        <!-- This heading stays constant: Parables of the Word -->
+        <!-- Constant main heading -->
         <header class="border-b border-amber-300 pb-4 mb-6">
           <h1 class="text-3xl md:text-4xl font-dm-display text-center text-amber-900">
             Parables of the Word
@@ -1105,14 +282,11 @@ New index.html (copy & paste this over your existing file)
   <p class="text-center text-sm md:text-base text-amber-700 font-dm-display">
     Parable 1 of 55 – Salt of the Earth &amp; Light of the World
   </p>
-
-  <!-- Scripture reference in Waterfall and red -->
   <p class="text-center text-base md:text-lg font-waterfall red-letter mt-2">
     Matthew 5:13–16
   </p>
 </section>
 
-<!-- Holy Scripture section -->
 <section class="mb-6">
   <h3 class="text-xl md:text-2xl font-dm-display italic mb-3 text-amber-900">
     Holy Scripture
@@ -1133,7 +307,6 @@ New index.html (copy & paste this over your existing file)
   </div>
 </section>
 
-<!-- Divine Interpretation -->
 <section class="mb-6">
   <h3 class="text-xl md:text-2xl font-dm-display mb-3 text-amber-900">
     Divine Interpretation
@@ -1152,7 +325,6 @@ New index.html (copy & paste this over your existing file)
   </p>
 </section>
 
-<!-- Historical and Cultural Context -->
 <section class="mb-6">
   <h3 class="text-xl md:text-2xl font-waterfall mb-3 text-amber-900">
     Historical and Cultural Context
@@ -1171,7 +343,6 @@ New index.html (copy & paste this over your existing file)
   </p>
 </section>
 
-<!-- Modern Application -->
 <section class="mb-2">
   <h3 class="text-xl md:text-2xl font-waterfall mb-3 text-amber-900">
     Modern Application
@@ -1189,9 +360,6 @@ New index.html (copy & paste this over your existing file)
   </p>
 </section>
 `,
-
-        // Other parables (2–12, 18–20) left as-is for now so your site still works.
-        // We can later refactor them to follow the same Holy Scripture / Interpretation / Context / Application structure.
 
         2: `
 <header class="border-b border-amber-200 pb-4 mb-6">
@@ -1229,7 +397,6 @@ New index.html (copy & paste this over your existing file)
 </section>
 `,
 
-        // Keeping the rest of your existing content structure so nothing breaks yet
         3: `
 <header class="border-b border-amber-200 pb-4 mb-6">
   <h2 class="text-3xl md:text-4xl font-dm-display mb-2 text-center text-amber-900">
@@ -1263,8 +430,6 @@ New index.html (copy & paste this over your existing file)
   </div>
 </section>
 `,
-
-        // ... you can keep 4–12, 18–20 exactly as you had them for now ...
 
         4: `
 <header class="border-b border-amber-200 pb-4 mb-6">
@@ -1325,16 +490,19 @@ New index.html (copy & paste this over your existing file)
 </section>
 `,
 
-        // (For brevity I'm not rewriting 6–12, 18–20 here, but you can paste your existing ones back in)
-      }}
-      ;; 
-      };};
-
-
-
-
-
-      
+        // Placeholders to keep site working – you can fill these in later with the same pattern
+        6: `<p class="text-center text-amber-700">Parable 6 content coming soon.</p>`,
+        7: `<p class="text-center text-amber-700">Parable 7 content coming soon.</p>`,
+        8: `<p class="text-center text-amber-700">Parable 8 content coming soon.</p>`,
+        9: `<p class="text-center text-amber-700">Parable 9 content coming soon.</p>`,
+        10: `<p class="text-center text-amber-700">Parable 10 content coming soon.</p>`,
+        11: `<p class="text-center text-amber-700">Parable 11 content coming soon.</p>`,
+        12: `<p class="text-center text-amber-700">Parable 12 content coming soon.</p>`,
+        18: `<p class="text-center text-amber-700">Parable 18 content coming soon.</p>`,
+        19: `<p class="text-center text-amber-700">Parable 19 content coming soon.</p>`,
+        20: `<p class="text-center text-amber-700">Parable 20 content coming soon.</p>`,
+        23: `<p class="text-center text-amber-700">Parable 23 content coming soon.</p>`,
+      };
 
       const contentDiv = document.getElementById("parable-content");
       const items = document.querySelectorAll(".parable-item");
