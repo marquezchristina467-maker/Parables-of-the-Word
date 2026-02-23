@@ -1,95 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parables of the Word</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: serif;
+        }
+        .parchment {
+            background-color: #FAEBD7; /* Parchment background */
+        }
+        .amber-text {
+            color: #FFBF00; /* Amber color */
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Welcome to the Parables of the Word</h1>
-    </header>
-    <main>
-        <section id="parable-1">
-            <h2>Parable 1: The Sower</h2>
-            <p>This parable tells the story of a sower who went out to sow seeds...</p>
-        </section>
-        <section id="parable-2">
-            <h2>Parable 2: The Lost Sheep</h2>
-            <p>In this parable, we learn about a shepherd who leaves the ninety-nine sheep to find the one that is lost...</p>
-        </section>
-        <section id="parable-3">
-            <h2>Parable 3: The Prodigal Son</h2>
-            <p>This story illustrates the forgiveness of a father towards his wayward son...</p>
-        </section>
-        <section id="parable-4">
-            <h2>Parable 4: The Good Samaritan</h2>
-            <p>The Good Samaritan teaches the importance of kindness and helping others...</p>
-        </section>
-        <section id="parable-5">
-            <h2>Parable 5: The Mustard Seed</h2>
-            <p>This parable demonstrates how the Kingdom of Heaven starts small but grows into something great...</p>
-        </section>
-        <section id="parable-6">
-            <h2>Parable 6: The Hidden Treasure</h2>
-            <p>This parable illustrates how valuable the Kingdom of Heaven is...</p>
-        </section>
-        <section id="parable-7">
-            <h2>Parable 7: The Pearl of Great Price</h2>
-            <p>In this story, a merchant finds a pearl of great value and sells everything to buy it...</p>
-        </section>
-        <section id="parable-8">
-            <h2>Parable 8: The Workers in the Vineyard</h2>
-            <p>This parable tells about the landowner who pays all workers the same regardless of when they worked...</p>
-        </section>
-        <section id="parable-9">
-            <h2>Parable 9: The Ten Virgins</h2>
-            <p>The story of the ten virgins illustrates the importance of being prepared...</p>
-        </section>
-        <section id="parable-10">
-            <h2>Parable 10: The Two Builders</h2>
-            <p>This parable compares the wise builder who built his house on rock with the foolish builder on sand...</p>
-        </section>
-        <section id="parable-11">
-            <h2>Parable 11: The Rich Fool</h2>
-            <p>This parable warns against greed and storing up treasures for oneself...</p>
-        </section>
-        <section id="parable-12">
-            <h2>Parable 12: The Lost Coin</h2>
-            <p>This story emphasizes the joy of recovering something that was lost...</p>
-        </section>
-        <section id="parable-13">
-            <h2>Parable 13: The Good Shepherd</h2>
-            <p>In this parable, Jesus represents Himself as the good shepherd who lays down His life for the sheep...</p>
-        </section>
-        <section id="parable-14">
-            <h2>Parable 14: The Sheep and the Goats</h2>
-            <p>This parable explains the final judgment and how people will be separated...</p>
-        </section>
-        <section id="parable-15">
-            <h2>Parable 15: The Unbearable Servant</h2>
-            <p>This story teaches about forgiveness and mercy...</p>
-        </section>
-        <section id="parable-16">
-            <h2>Parable 16: The Great Feast</h2>
-            <p>The Great Feast illustrates God's invitation to everyone...</p>
-        </section>
-        <section id="parable-17">
-            <h2>Parable 17: The Rich Young Ruler</h2>
-            <p>This parable discusses the cost of discipleship...</p>
-        </section>
-        <section id="parable-18">
-            <h2>Parable 18: The Coming of the Kingdom</h2>
-            <p>This story illustrates the unexpected nature of the Kingdom of God...</p>
-        </section>
-        <section id="parable-19">
-            <h2>Parable 19: The Barren Fig Tree</h2>
-            <p>This parable emphasizes the importance of bearing fruit...</p>
-        </section>
-    </main>
-    <footer>
-        <p>© 2026 Parables of the Word. All rights reserved.</p>
-    </footer>
+
+<body class="flex h-screen">
+    <div class="w-1/4 bg-slate-800 text-white overflow-auto">
+        <h2 class="text-center text-xl font-bold my-4">Parables</h2>
+        <ul>
+            <!-- Sidebar items for 55 parables -->
+            <!-- Example for the first few parables -->
+            <li class="parable-item cursor-pointer hover:bg-gray-700" data-parable="1">Parable 1</li>
+            <li class="parable-item cursor-pointer hover:bg-gray-700" data-parable="2">Parable 2</li>
+            <!-- ... -->
+            <li class="parable-item cursor-pointer hover:bg-gray-700" data-parable="55">Parable 55</li>
+        </ul>
+    </div>
+
+    <div class="w-3/4 parchment p-6 overflow-auto">
+        <h1 class="text-2xl font-bold">Parable Details</h1>
+        <div id="parable-content">
+            <!-- Example content for the first parable -->
+            <div class="parable" data-parable="1">
+                <h2 class="text-xl font-semibold amber-text">Parable 1</h2>
+                <h3 class="amber-text">Holy Scripture</h3>
+                <p>Scripture content for Parable 1.</p>
+                <h3 class="amber-text">Divine Interpretation</h3>
+                <p>Interpretation content for Parable 1.</p>
+                <h3 class="amber-text">Historical and Cultural Context</h3>
+                <p>Context for Parable 1.</p>
+                <h3 class="amber-text">Modern Application</h3>
+                <p>Application for Parable 1.</p>
+            </div>
+            <!-- Repeat similar structure for other parables -->
+            <!-- Example content for the second parable -->
+            <div class="parable" data-parable="2" style="display:none;">
+                <h2 class="text-xl font-semibold amber-text">Parable 2</h2>
+                <h3 class="amber-text">Holy Scripture</h3>
+                <p>Scripture content for Parable 2.</p>
+                <h3 class="amber-text">Divine Interpretation</h3>
+                <p>Interpretation content for Parable 2.</p>
+                <h3 class="amber-text">Historical and Cultural Context</h3>
+                <p>Context for Parable 2.</p>
+                <h3 class="amber-text">Modern Application</h3>
+                <p>Application for Parable 2.</p>
+            </div>
+            <!-- ... Placeholder content for parables 3-19 -->
+            <div class="parable" data-parable="3" style="display:none;">
+                <h2 class="text-xl font-semibold amber-text">Parable 3</h2>
+                <h3 class="amber-text">Holy Scripture</h3>
+                <p>Scripture content for Parable 3.</p>
+                <h3 class="amber-text">Divine Interpretation</h3>
+                <p>Interpretation content for Parable 3.</p>
+                <h3 class="amber-text">Historical and Cultural Context</h3>
+                <p>Context for Parable 3.</p>
+                <h3 class="amber-text">Modern Application</h3>
+                <p>Application for Parable 3.</p>
+            </div>
+            <!-- Add content for parables 4-19 with complete details -->
+            <!-- Placeholder for parables 20-55 -->
+            <div class="parable" data-parable="20" style="display:none;">
+                <h2 class="text-xl font-semibold amber-text">Parable 20</h2>
+                <h3 class="amber-text">Holy Scripture</h3>
+                <p>Scripture content for Parable 20.</p>
+                <h3 class="amber-text">Divine Interpretation</h3>
+                <p>Interpretation content for Parable 20.</p>
+                <h3 class="amber-text">Historical and Cultural Context</h3>
+                <p>Context for Parable 20.</p>
+                <h3 class="amber-text">Modern Application</h3>
+                <p>Application for Parable 20.</p>
+            </div>
+            <!-- Repeat this format for parables 21-55 -->
+        </div>
+    </div>
+
+    <script>
+        const parableItems = document.querySelectorAll('.parable-item');
+        const parables = document.querySelectorAll('.parable');
+
+        parableItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const parableId = item.getAttribute('data-parable');
+
+                parables.forEach(parable => {
+                    if (parable.getAttribute('data-parable') === parableId) {
+                        parable.style.display = 'block';
+                    } else {
+                        parable.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
