@@ -1699,10 +1699,10 @@
     hold and reclaim life and peace.
   </p>
 </section>
+
+</section>
 `,
 
-        18: `<p class="text-center text-amber-700">Parable 18 content coming soon.</p>`,
-        19: `<p class="text-center text-amber-700">Parable 19 content coming soon.</p>`,
         20: `<p class="text-center text-amber-700">Parable 20 content coming soon.</p>`,
         23: `<p class="text-center text-amber-700">Parable 23 content coming soon.</p>`,
       };
@@ -1725,7 +1725,9 @@
           const num = parseInt(btn.getAttribute("data-parable"), 10);
           showParable(num);
 
-          items.forEach((b) => b.classList.remove("bg-slate-800", "border-slate-700"));
+          items.forEach((b) =>
+            b.classList.remove("bg-slate-800", "border-slate-700")
+          );
           btn.classList.add("bg-slate-800", "border-slate-700");
         });
       });
@@ -1735,5 +1737,3 @@
     </script>
   </body>
 </html>
-
-
